@@ -11,64 +11,85 @@
     <meta property="og:description" content="Build your telecom empire from scratch. Global launch coming soon!">
     <meta property="og:image" content="https://networkbossgame.com/assets/img/og-image.jpg"> 
 	
-	<style> 
-        body, html {
+	<style>
+        /* SIFIRLAMA: Her tarayıcıda aynı görünmesi için */
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; 
-            background-color: #101010; 
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-
-        .container {
+            flex-direction: column; /* Yukarıdan aşağıya dizilim */
+            overflow: hidden; /* Sayfa kaydırmayı engelle */
             position: relative;
-            width: 100%;
-            height: 100%;
+        }
+
+        /* 🚀 MASAÜSTÜ İÇİN BLUR ARKAPLAN HİLESİ */
+        /* Yanlardaki siyah boşlukları resminin bulanık haliyle doldurur */
+        .background-blur {
+            position: absolute;
+            top: -5%; left: -5%; right: -5%; bottom: -5%; /* Kenar taşmalarını engellemek için %5 pay */
+            background-image: url('assets/img/resim-adini-buraya-yaz.jpg'); /* DİKKAT: RESİM ADINI GİR */
+            background-size: cover;
+            background-position: center;
+            filter: blur(25px) brightness(0.25); /* Resmi bulanıklaştır ve karart */
+            z-index: -1; /* En arkaya at */
+        }
+
+        /* ANA İÇERİK: Resmi ortalama */
+        .main-content {
+            flex: 1; /* Footer'dan kalan tüm alanı kapla */
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
-        /* 
-        .coming-soon-image {
+        /* AFİŞ GÖRSELİ */
+        .poster {
             max-width: 100%;
-            max-height: 100%;
+            max-height: calc(100vh - 100px); /* Ekranın yüksekliğine tam otur, footer'a pay bırak */
             object-fit: contain;
-            box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
+            border-radius: 12px; /* Köşeleri hafif yumuşat (Şık durur) */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8); /* Derinlik hissi için gölge */
         }
 
-        /* Footer 
+        /* BETON GİBİ SAĞLAM FOOTER */
         .footer {
-            position: absolute;
-            bottom: 20px;
-            text-align: center;
             width: 100%;
-            font-size: 14px;
-            opacity: 0.7;
+            padding: 15px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6); /* Arkası hafif şeffaf siyah */
+            backdrop-filter: blur(10px); /* Cam efekti */
+            font-size: 15px;
+            z-index: 10;
         }
 
         .footer a {
-            color: cyan;
+            color: #00e5ff; /* Tycoon temasına uygun neon mavi */
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         .footer a:hover {
-            text-decoration: underline;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="assets/img/network-boss-coming-soon.png" alt="Network Boss: Telecom Tycoon Coming Soon" class="coming-soon-image">
+    <div class="background-blur"></div>
+
+    <div class="main-content">
+        <img src="assets/img/network-boss-coming-soon.png" alt="Network Boss Coming Soon" class="poster">
     </div>
 
     <div class="footer">
