@@ -12,7 +12,6 @@
     <meta property="og:image" content="https://networkbossgame.com/assets/img/og-image.jpg"> 
 	
 	<style>
-        /* SIFIRLAMA: Her tarayıcıda aynı görünmesi için */
         * {
             margin: 0;
             padding: 0;
@@ -25,54 +24,52 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Yukarıdan aşağıya dizilim */
-            overflow: hidden; /* Sayfa kaydırmayı engelle */
+            flex-direction: column;
+            overflow: hidden;
             position: relative;
         }
 
-        /* 🚀 MASAÜSTÜ İÇİN BLUR ARKAPLAN HİLESİ */
-        /* Yanlardaki siyah boşlukları resminin bulanık haliyle doldurur */
         .background-blur {
             position: absolute;
-            top: -5%; left: -5%; right: -5%; bottom: -5%; /* Kenar taşmalarını engellemek için %5 pay */
-            background-image: url('assets/img/resim-adini-buraya-yaz.jpg'); /* DİKKAT: RESİM ADINI GİR */
+            top: -5%; left: -5%; right: -5%; bottom: -5%; 
+            background-image: url('assets/img/resim-adini-buraya-yaz.jpg'); 
             background-size: cover;
             background-position: center;
-            filter: blur(25px) brightness(0.25); /* Resmi bulanıklaştır ve karart */
-            z-index: -1; /* En arkaya at */
+            filter: blur(25px) brightness(0.25); 
+            z-index: -1;
         }
 
-        /* ANA İÇERİK: Resmi ortalama */
+
         .main-content {
-            flex: 1; /* Footer'dan kalan tüm alanı kapla */
+            flex: 1; 
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
 
-        /* AFİŞ GÖRSELİ */
+
         .poster {
             max-width: 100%;
-            max-height: calc(100vh - 100px); /* Ekranın yüksekliğine tam otur, footer'a pay bırak */
+            max-height: calc(100vh - 100px); 
             object-fit: contain;
-            border-radius: 12px; /* Köşeleri hafif yumuşat (Şık durur) */
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8); /* Derinlik hissi için gölge */
+            border-radius: 12px; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
         }
 
-        /* BETON GİBİ SAĞLAM FOOTER */
+
         .footer {
             width: 100%;
             padding: 15px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.6); /* Arkası hafif şeffaf siyah */
-            backdrop-filter: blur(10px); /* Cam efekti */
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px); 
             font-size: 15px;
             z-index: 10;
         }
 
         .footer a {
-            color: #00e5ff; /* Tycoon temasına uygun neon mavi */
+            color: #00e5ff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -93,7 +90,7 @@
     </div>
 
     <div class="footer">
-        © 2026 asamet.dev | 
+        © 2026 Samet Saygi | 
         <a href="privacy.html">Privacy Policy</a> | 
         <a href="mailto:contact@networkbossgame.com">Contact</a>
     </div>
