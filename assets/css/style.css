@@ -1374,13 +1374,6 @@ nav {
     margin-bottom: 12px;
 }
 
-.fleet-meta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    align-items: center;
-}
-
 .fleet-tier-tag {
     display: inline-block;
     padding: 3px 10px;
@@ -1390,17 +1383,6 @@ nav {
     text-transform: uppercase;
     background: rgba(255, 255, 255, 0.08);
     color: var(--primary-cyan);
-}
-
-.fleet-upgrade-tag {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 6px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    background: rgba(245, 158, 11, 0.15);
-    color: var(--amber-copper);
-    border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 /* ==========================================================================
