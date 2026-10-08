@@ -60,6 +60,7 @@
                     <li><a href="#city-life" class="nav-link" data-i18n="nav.city_life">Şehir & Borsa</a></li>
                     <li><a href="#techroad" class="nav-link" data-i18n="nav.tech_tree">Teknoloji</a></li>
                     <li><a href="#simulator" class="nav-link" data-i18n="nav.simulator">Simülatör</a></li>
+                    <li><a href="#noc-sim" class="nav-link" data-i18n="nav.noc_sim">Kriz Masası</a></li>
                     <li><a href="#story" class="nav-link" data-i18n="nav.story">Hikâye</a></li>
                     <li><a href="#fleet" class="nav-link" data-i18n="nav.fleet">Filo</a></li>
                     <li><a href="#gallery" class="nav-link" data-i18n="nav.gallery">Galeri</a></li>
@@ -723,6 +724,206 @@
                         <p class="elif-dialogue-text" id="elifSpeech">
                             "Dengeli bir paket. Sabit gelir akışı sağlar ve ağ yükünü kontrol altında tutar. Tam bir mühendis aklı!"
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7B. INTERACTIVE NOC CRISIS SIMULATOR -->
+    <section class="noc-section" id="noc-sim">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge badge-danger" data-i18n="noc.badge">🚨 7/24 ŞEBEKE KRİZ MASASI (NOC)</div>
+                <h2 class="section-title" data-i18n="noc.title">Şebeke Çökmek Üzere! Kriz Kararını Sen Ver.</h2>
+                <p class="section-subtitle" data-i18n="noc.subtitle">
+                    Saha arızaları, derbi kalabalıkları, elektrik kesintileri ve siber saldırılar... Bir telekom yöneticisi kriz anında saniyeler içinde ne karar verir? Aşağıdaki canlı senaryoları yönet, şebekeyi kurtar!
+                </p>
+            </div>
+
+            <!-- Scenario Tabs -->
+            <div class="noc-tabs">
+                <button type="button" class="noc-tab-btn active" data-scenario="fiber">
+                    <i class="fas fa-network-wired"></i>
+                    <span data-i18n="noc.tab_fiber">Ana Fiber Kopması</span>
+                </button>
+                <button type="button" class="noc-tab-btn" data-scenario="crowd">
+                    <i class="fas fa-users-rays"></i>
+                    <span data-i18n="noc.tab_crowd">Derbi & 50K Kalabalık</span>
+                </button>
+                <button type="button" class="noc-tab-btn" data-scenario="blackout">
+                    <i class="fas fa-bolt-lightning"></i>
+                    <span data-i18n="noc.tab_blackout">Elektrik Kesintisi</span>
+                </button>
+                <button type="button" class="noc-tab-btn" data-scenario="cyber">
+                    <i class="fas fa-shield-virus"></i>
+                    <span data-i18n="noc.tab_cyber">400 Gbps DDoS Tehdidi</span>
+                </button>
+            </div>
+
+            <!-- NOC Command Terminal Container -->
+            <div class="noc-terminal-card">
+                <!-- Terminal Top Bar -->
+                <div class="noc-terminal-header">
+                    <div class="noc-status-box">
+                        <span class="noc-led-indicator pulse-danger" id="nocLed"></span>
+                        <span class="noc-status-text" id="nocStatusText" data-i18n="noc.status_critical">SİSTEM DURUMU: KRİTİK SEVİYE 1</span>
+                    </div>
+                    <div class="noc-timer-box">
+                        <i class="fas fa-stopwatch"></i>
+                        <span data-i18n="noc.timer_label">KRİTİK KARAR SÜRESİ:</span>
+                        <span class="noc-countdown" id="nocCountdown">00:28</span>
+                    </div>
+                    <div class="noc-incident-pill" id="nocIncidentId">INCIDENT-ID: #TR-NOC-402</div>
+                </div>
+
+                <!-- Telemetry HUD Grid -->
+                <div class="noc-telemetry-grid">
+                    <div class="noc-telemetry-card">
+                        <div class="telemetry-top">
+                            <span class="telemetry-lbl" data-i18n="noc.hud_sla">Şebeke Uptime / SLA</span>
+                            <span class="telemetry-trend trend-down" id="nocSlaTrend"><i class="fas fa-arrow-down"></i> -%0.4</span>
+                        </div>
+                        <div class="telemetry-val" id="nocSlaVal">%99.8</div>
+                        <div class="telemetry-bar"><div class="telemetry-fill fill-sla" id="nocSlaBar" style="width: 92%;"></div></div>
+                    </div>
+
+                    <div class="noc-telemetry-card">
+                        <div class="telemetry-top">
+                            <span class="telemetry-lbl" data-i18n="noc.hud_stock">Hisse Senedi Değeri</span>
+                            <span class="telemetry-trend trend-down" id="nocStockTrend"><i class="fas fa-arrow-trend-down"></i> Tehdit Altında</span>
+                        </div>
+                        <div class="telemetry-val" id="nocStockVal">₺42.50</div>
+                        <div class="telemetry-bar"><div class="telemetry-fill fill-stock" id="nocStockBar" style="width: 78%;"></div></div>
+                    </div>
+
+                    <div class="noc-telemetry-card">
+                        <div class="telemetry-top">
+                            <span class="telemetry-lbl" data-i18n="noc.hud_sentiment">Halk Memnuniyeti</span>
+                            <span class="telemetry-trend trend-warn" id="nocSentimentTrend"><i class="fas fa-face-meh"></i> Gergin</span>
+                        </div>
+                        <div class="telemetry-val" id="nocSentimentVal">%86</div>
+                        <div class="telemetry-bar"><div class="telemetry-fill fill-sentiment" id="nocSentimentBar" style="width: 86%;"></div></div>
+                    </div>
+
+                    <div class="noc-telemetry-card">
+                        <div class="telemetry-top">
+                            <span class="telemetry-lbl" data-i18n="noc.hud_subs">Etkilenen Abone</span>
+                            <span class="telemetry-trend trend-danger" id="nocSubsTrend"><i class="fas fa-triangle-exclamation"></i> Kesilme Eşiği</span>
+                        </div>
+                        <div class="telemetry-val text-danger" id="nocSubsVal">18.500</div>
+                        <div class="telemetry-bar"><div class="telemetry-fill fill-danger" id="nocSubsBar" style="width: 95%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Incident Brief & Tactical Log Console -->
+                <div class="noc-body-grid">
+                    <!-- Left: Incident Intel & Radar Schematic -->
+                    <div class="noc-intel-pane">
+                        <div class="noc-alert-banner">
+                            <span class="noc-alert-code" id="nocAlertLevel" data-i18n="noc.fiber.alert_level">KOD: KIRMIZI ALARM — FİZİKSEL HAT KOPMASI</span>
+                        </div>
+                        <h3 class="noc-event-title" id="nocEventTitle" data-i18n="noc.fiber.title">Kadıköy-Üsküdar Ana Fiber Omurgası Koptu!</h3>
+                        <p class="noc-event-desc" id="nocEventDesc" data-i18n="noc.fiber.desc">
+                            Metro hattı inşaat kazısında ana fiber borusu parçalandı. 18.000 abonenin trafiği kesilme eşiğinde. Taşıma kapasitesi %12'ye geriledi!
+                        </p>
+
+                        <!-- Radar Node Graphic -->
+                        <div class="noc-radar-display">
+                            <div class="radar-sweep"></div>
+                            <div class="radar-grid-lines"></div>
+                            <div class="radar-node node-core" title="Merkez Santral"><i class="fas fa-building"></i></div>
+                            <div class="radar-node node-alert" id="radarAlertNode" title="Arıza Bölgesi"><i class="fas fa-triangle-exclamation"></i></div>
+                            <div class="radar-node node-backup" title="Yedek Halka / Ring"><i class="fas fa-circle-nodes"></i></div>
+                            <div class="radar-link link-broken"></div>
+                            <div class="radar-link link-backup"></div>
+                            <div class="radar-tag" id="radarTag">SECTOR-04: FIBER LINK BROKEN</div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Console Stream & Tactical Directives -->
+                    <div class="noc-console-pane">
+                        <div class="console-box-header">
+                            <div class="console-header-left">
+                                <span class="console-dot dot-red"></span>
+                                <span class="console-dot dot-yellow"></span>
+                                <span class="console-dot dot-green"></span>
+                                <span class="console-title" data-i18n="noc.console_title">NOC CANLI TELEMETRİ & OLAY GÜNLÜĞÜ</span>
+                            </div>
+                            <span class="console-badge">TTY_PORT: 8080</span>
+                        </div>
+
+                        <!-- Live Log Stream -->
+                        <div class="noc-log-stream" id="nocLogStream">
+                            <!-- Populated dynamically by JS -->
+                        </div>
+
+                        <!-- Tactical Action Deck Header -->
+                        <div class="action-deck-header">
+                            <i class="fas fa-crosshairs"></i>
+                            <span data-i18n="noc.action_header">MÜDAHALE EMİRLERİ (BİRİNİ SEÇİN):</span>
+                        </div>
+
+                        <!-- Action Choice Cards -->
+                        <div class="noc-actions-list" id="nocActionsList">
+                            <!-- Dynamic choices generated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crisis Outcome Overlay (Triggered upon decision) -->
+                <div class="noc-result-overlay" id="nocResultOverlay">
+                    <div class="noc-result-modal">
+                        <div class="result-rank-badge" id="resultRankBadge">🏆 KIDEMLİ ŞEBEKE BAŞMİMARI (+250 Puan)</div>
+                        <h3 class="result-title" id="resultTitle">Kusursuz Mühendislik Zaferi!</h3>
+                        <p class="result-desc" id="resultDesc">
+                            Sinyal milisaniyeler içinde ters yönden dolandı. Aboneler kesintiyi fark etmedi bile! Arıza ekibi kabloyu onarırken şebeke %100 kesintisiz çalışmaya devam etti.
+                        </p>
+
+                        <!-- Stat Impact Pill Badges -->
+                        <div class="result-deltas-grid">
+                            <div class="result-delta-card" id="resDeltaSlaCard">
+                                <span class="delta-lbl">Uptime / SLA</span>
+                                <strong class="delta-val" id="resDeltaSla">+0.1%</strong>
+                            </div>
+                            <div class="result-delta-card" id="resDeltaStockCard">
+                                <span class="delta-lbl">SignalStock</span>
+                                <strong class="delta-val" id="resDeltaStock">+₺2.72 (+6.4%)</strong>
+                            </div>
+                            <div class="result-delta-card" id="resDeltaSentCard">
+                                <span class="delta-lbl">Memnuniyet</span>
+                                <strong class="delta-val" id="resDeltaSent">+8% (%94)</strong>
+                            </div>
+                        </div>
+
+                        <!-- Chirper Reaction Card -->
+                        <div class="result-chirper-card">
+                            <div class="chirper-card-header">
+                                <div class="chirper-user-info">
+                                    <div class="chirper-avatar" id="resChirperAvatar"><i class="fas fa-user-astronaut"></i></div>
+                                    <div>
+                                        <strong class="chirper-name" id="resChirperName">@Eren_Gamer</strong>
+                                        <span class="chirper-tag" data-i18n="noc.chirper_badge">CANLI CHIRPER REAKSİYONU</span>
+                                    </div>
+                                </div>
+                                <i class="fab fa-twitter chirper-icon"></i>
+                            </div>
+                            <p class="chirper-text" id="resChirperText">
+                                "Oha maç yayını tek saniye bile donmadı! İşte gerçek telekom altyapısı bu, helal olsun @NetworkBoss!"
+                            </p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="result-actions">
+                            <button type="button" class="btn btn-secondary" id="nocRetryBtn">
+                                <i class="fas fa-rotate-left"></i>
+                                <span data-i18n="noc.retry_btn">Başka Bir Kriz Yönet</span>
+                            </button>
+                            <a href="#preregister" class="btn btn-primary" id="nocPreregBtn">
+                                <i class="fas fa-tower-broadcast"></i>
+                                <span data-i18n="noc.prereg_btn">Gerçek Şebekeni Kur — Ön Kayıt Ol</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
