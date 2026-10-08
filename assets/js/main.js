@@ -837,7 +837,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. Pre-registration Form (FormSubmit.co / AJAX)
+    // 7. Pre-registration Form (Google Sheets Web App Integration)
+    const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbw2itiHpitkezC1PFVPr1NpVZrWxiDl0rFCm339bnZcjEyT-uY9v0_em2DGOPHFWG8e/exec';
+
     const preregForm = document.getElementById('preregForm');
     const formResponse = document.getElementById('formResponseMsg');
 
@@ -853,35 +855,38 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = preregForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + (currentLang === 'tr' ? 'Gönderiliyor...' : 'Sending...');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + (currentLang === 'tr' ? 'Kaydediliyor...' : 'Saving...');
+
+            const payload = JSON.stringify({
+                email: emailInput.value.trim(),
+                platform: platformInput ? platformInput.value : 'Android',
+                source: 'Network Boss Resmi Web Sitesi',
+                timestamp: new Date().toLocaleString('tr-TR')
+            });
 
             try {
-                const response = await fetch('https://formsubmit.co/ajax/contact@networkbossgame.com', {
+                // Post directly to Google Sheets Web App
+                await fetch(GOOGLE_SHEETS_API_URL, {
                     method: 'POST',
+                    mode: 'no-cors',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
+                        'Content-Type': 'text/plain;charset=utf-8'
                     },
-                    body: JSON.stringify({
-                        email: emailInput.value.trim(),
-                        platform: platformInput ? platformInput.value : 'Android',
-                        source: 'Network Boss Official Website',
-                        timestamp: new Date().toISOString()
-                    })
+                    body: payload
                 });
 
-                if (response.ok) {
-                    formResponse.className = 'form-response-msg success';
-                    formResponse.textContent = dict['prereg.success_msg'];
-                    formResponse.style.display = 'block';
-                    emailInput.value = '';
-                } else {
-                    formResponse.className = 'form-response-msg error';
-                    formResponse.textContent = dict['prereg.error_msg'];
-                    formResponse.style.display = 'block';
-                }
+                formResponse.className = 'form-response-msg success';
+                formResponse.textContent = dict['prereg.success_msg'];
+                formResponse.style.display = 'block';
+                emailInput.value = '';
             } catch (err) {
-                // If offline / local test / CORS restriction occurs
+                try {
+                    await fetch(GOOGLE_SHEETS_API_URL, {
+                        method: 'POST',
+                        body: payload
+                    });
+                } catch(e) {}
+
                 formResponse.className = 'form-response-msg success';
                 formResponse.textContent = dict['prereg.success_msg'];
                 formResponse.style.display = 'block';
