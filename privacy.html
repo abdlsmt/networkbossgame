@@ -1,66 +1,410 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Network Boss: Telecom Tycoon</title>
+    <title id="pageTitle">Gizlilik Politikası | Network Boss: Telecom Tycoon</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; color: #333; }
-        h1 { color: #0056b3; }
-        h2 { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        .lang-switch { background: #f4f4f4; padding: 10px; border-radius: 5px; margin-bottom: 20px; text-align: center; }
-        .lang-switch a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #0056b3; }
+        .privacy-page {
+            padding: 140px 0 80px;
+            min-height: 100vh;
+        }
+        .privacy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 48px;
+            backdrop-filter: blur(16px);
+            max-width: 920px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        .privacy-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-glass);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .privacy-card h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-cyan);
+            letter-spacing: -0.5px;
+        }
+        .privacy-card h2 {
+            font-size: 1.35rem;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            color: #fff;
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .privacy-card h2 i {
+            color: var(--primary-cyan);
+            font-size: 1.15rem;
+        }
+        .privacy-card h3 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: var(--amber-copper);
+        }
+        .privacy-card p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.75;
+            font-size: 0.96rem;
+        }
+        .privacy-card ul {
+            margin-left: 20px;
+            margin-bottom: 22px;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+        .privacy-card li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .privacy-card a {
+            color: var(--primary-cyan);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: var(--transition-fast);
+        }
+        .privacy-card a:hover {
+            color: #fff;
+        }
+        .privacy-box {
+            background: rgba(0, 240, 255, 0.04);
+            border: 1px solid rgba(0, 240, 255, 0.18);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin: 20px 0;
+        }
+        .privacy-box.warning {
+            background: rgba(245, 158, 11, 0.05);
+            border-color: rgba(245, 158, 11, 0.25);
+        }
+        .privacy-box p:last-child {
+            margin-bottom: 0;
+        }
+        .lang-pills {
+            display: flex;
+            gap: 10px;
+        }
+        .lang-pill-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .lang-pill-btn.active, .lang-pill-btn:hover {
+            background: var(--primary-cyan-dim);
+            border-color: var(--primary-cyan);
+            color: var(--primary-cyan);
+        }
+        .policy-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .policy-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .privacy-card {
+                padding: 28px 20px;
+            }
+            .privacy-card h1 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="lang-switch">
-        <a href="#english">English</a> | <a href="#turkish">Türkçe</a>
-    </div>
+    <!-- Ambient Glows -->
+    <div class="bg-ambient-glow ambient-1"></div>
+    <div class="bg-ambient-glow ambient-2"></div>
+    <div class="bg-ambient-glow ambient-3"></div>
 
-    <section id="english">
-        <h1>Privacy Policy</h1>
-        <p>Last updated: February 27, 2026</p>
-        <p><strong>Network Boss: Telecom Tycoon</strong> is developed by <strong>Samet Saygı</strong> . This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Game.</p>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-group">
+                <img src="assets/img/network-boss-main-logo.png" alt="Network Boss Logo" class="nav-logo-img">
+                <span class="nav-brand-title">NETWORK <span>BOSS</span></span>
+            </a>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-secondary" id="btnBackHome">
+                    <i class="fas fa-arrow-left"></i> <span>Ana Sayfaya Dön</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-        <h2>1. Information Collection and Use</h2>
-        <p>We do not collect any personal identification information (such as name or email) directly within the game. However, for technical performance and analytics, some non-personal data may be collected automatically by third-party services.</p>
+    <main class="privacy-page">
+        <div class="container">
+            <div class="privacy-card">
+                <div class="privacy-nav">
+                    <div>
+                        <span class="badge" id="legalBadge">HUKUKİ BİLGİLENDİRME</span>
+                    </div>
+                    <div class="lang-pills">
+                        <button type="button" class="lang-pill-btn active" id="btnPolicyTr">
+                            <i class="fas fa-globe"></i> Türkçe
+                        </button>
+                        <button type="button" class="lang-pill-btn" id="btnPolicyEn">
+                            <i class="fas fa-globe"></i> English
+                        </button>
+                    </div>
+                </div>
 
-        <h2>2. Third-Party Services</h2>
-        <p>Our Game may use third-party services that collect information used to identify you. Links to the privacy policy of third-party service providers used by the game:</p>
-        <ul>
-            <li><a href="https://google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-            <li><a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity Services</a></li>
-        </ul>
+                <!-- ========================================================
+                     TURKISH PRIVACY POLICY
+                     ======================================================== -->
+                <div class="policy-section active" id="policyTr">
+                    <h1>Gizlilik Politikası</h1>
+                    <p><em>Son Güncelleme: 8 Ekim 2026</em></p>
+                    <p><strong>Network Boss: Telecom Tycoon</strong> oyunu (mobil ve PC sürümleri) ve resmi web sitesi (<strong>networkbossgame.com</strong>) bağımsız geliştirici <strong>Samet Saygı</strong> tarafından geliştirilmekte ve yönetilmektedir. Bu Gizlilik Politikası, oyunumuzu oynadığınızda veya web sitemizi ziyaret ettiğinizde kişisel verilerinizin toplanması, işlenmesi, korunması ve haklarınız konusunda sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
 
-        <h2>3. Data Security</h2>
-        <p>The security of your data is important to us, but remember that no method of transmission over the Internet is 100% secure.</p>
+                    <h2><i class="fas fa-shield-halved"></i> 1. Veri Sorumlusu ve Genel Kapsam</h2>
+                    <p>Veri sorumlusu <strong>Samet Saygı</strong>'dır. Bu politika; <strong>Google Play</strong>, <strong>Apple App Store</strong>, <strong>Valve Steam</strong> platformları üzerinden indirilen tüm resmi oyun istemcilerini ve web sitemizi kapsar. Oyuncularımızın gizliliğine ve veri güvenliğine en üst düzeyde saygı duymaktayız.</p>
 
-        <h2>4. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <strong>asametsaygi@gmail.com</strong></p>
-    </section>
+                    <h2><i class="fas fa-database"></i> 2. Toplanan Veriler ve Kullanım Amaçları</h2>
+                    <p>Network Boss, gereksiz veri toplamama ve kullanıcı gizliliğini koruma prensibiyle tasarlanmıştır:</p>
+                    
+                    <h3>A. Web Sitesi Ön Kayıt ve E-Posta Listesi</h3>
+                    <p>Web sitemizdeki ön kayıt formuna kendi rızanızla girdiğiniz e-posta adresiniz; yalnızca oyunun Google Play, App Store ve Steam platformlarında yayınlandığı tarihi bildirmek, önemli geliştirme haberlerini iletmek ve lansman günü ön kayıt ödüllerini teslim etmek amacıyla saklanır. E-posta adresiniz asla üçüncü taraflara satılmaz, kiralanmaz veya ticari reklam amacıyla paylaşılmaz.</p>
 
-    <hr>
+                    <h3>B. Oyun İçi İlerleme ve Yerel Kayıt Dosyaları (Save Data)</h3>
+                    <p>Oyun içerisindeki şebeke altyapınız, kazandığınız gelirler, teknoloji seviyeniz ve çalışanlarınız doğrudan kullanıcının kendi cihazında yerel olarak (Local Storage / Persistent Data Path) saklanır. Cihazınızdaki bu oyun kayıtları bizim sunucularımıza şahsi kimlik bilginizle eşleştirilerek aktarılmaz.</p>
 
-    <section id="turkish">
-        <h1>Gizlilik Politikası</h1>
-        <p>Son Güncelleme: 27 Şubat 2026</p>
-        <p><strong>Network Boss: Telecom Tycoon</strong> oyunu <strong>Samet Saygı</strong> tarafından geliştirilmiştir. Bu sayfa, oyunu kullandığınızda kişisel verilerin toplanması ve işlenmesi ile ilgili politikalarımızı içerir.</p>
+                    <h3>C. Teknik ve Tanılama Verileri (Performans & Çökme Raporları)</h3>
+                    <p>Oyunun kararlılığını sağlamak, kare hızı (FPS) düşüşlerini gidermek ve olası çökmeleri tespit etmek amacıyla kişisel kimlikten arındırılmış (anonim) teknik donanım bilgileri (cihaz modeli, işletim sistemi sürümü, RAM miktarı, ekran çözünürlüğü ve hata logları) işlenebilir.</p>
 
-        <h2>1. Veri Toplama ve Kullanım</h2>
-        <p>Oyun içerisinde doğrudan kişisel kimlik bilgilerinizi (isim, e-posta vb.) toplamıyoruz. Ancak teknik performans analizi için üçüncü taraf hizmetler tarafından anonim veriler toplanabilir.</p>
+                    <h2><i class="fas fa-layer-group"></i> 3. Üçüncü Taraf Dağıtım Platformları ve Altyapı Hizmetleri</h2>
+                    <p>Oyunumuz ve web sitemiz, küresel dağıtım ve teknik altyapı için güvenilir üçüncü taraf platform sağlayıcılarıyla çalışmaktadır. Bu sağlayıcılar kendi gizlilik politikaları çerçevesinde işlem yapmaktadır:</p>
+                    <ul>
+                        <li>
+                            <strong>Apple App Store & Game Center (Apple Inc.):</strong> iOS sürümünün dağıtımı, indirilmesi, uygulama içi satın alma (IAP) işlemleri ve isteğe bağlı Game Center başarımları ile bulut kayıtları Apple altyapısı üzerinden yürütülür. 
+                            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Gizlilik Politikası</a>
+                        </li>
+                        <li>
+                            <strong>Valve Steam / Steamworks (Valve Corporation):</strong> PC sürümünün dağıtımı, Steam Cloud kayıt yedeklemesi, Steam başarımları ve topluluk özellikleri Valve altyapısı üzerinden işlenir.
+                            <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener noreferrer">Valve Steam Gizlilik Sözleşmesi</a>
+                        </li>
+                        <li>
+                            <strong>Google Play Hizmetleri & Analytics (Google LLC):</strong> Android sürümünün dağıtımı, oyun hizmetleri ve hata analizi Google altyapısı üzerinden sağlanır.
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a>
+                        </li>
+                        <li>
+                            <strong>Unity Gaming Services (Unity Technologies):</strong> Oyun motorunun performans takibi, çökme analitiği ve teknik optimizasyon araçları.
+                            <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity Gizlilik Politikası</a>
+                        </li>
+                        <li>
+                            <strong>Formspree / Güvenli E-Posta İletim Servisi:</strong> Web sitemizdeki ön kayıt formunun güvenli olarak iletilmesi için kullanılan form altyapısı.
+                            <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree Gizlilik Politikası</a>
+                        </li>
+                    </ul>
 
-        <h2>2. Üçüncü Taraf Hizmetler</h2>
-        <p>Oyunumuz, sizi tanımlamak için kullanılan bilgileri toplayabilen üçüncü taraf hizmetleri kullanabilir:</p>
-        <ul>
-            <li><a href="https://google.com/policies/privacy/" target="_blank">Google Play Hizmetleri</a></li>
-            <li><a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity Hizmetleri</a></li>
-        </ul>
+                    <h2><i class="fas fa-cookie-bite"></i> 4. Çerezler ve Yerel Tarayıcı Depolaması (LocalStorage)</h2>
+                    <p>Web sitemizde (networkbossgame.com) hiçbir üçüncü taraf reklam veya takip çerezi (tracking cookie) kullanılmaz. Yalnızca ziyaretçinin site dil seçimini (Türkçe veya İngilizce) hatırlamak için tarayıcınızın yerel depolama alanı (<code>localStorage</code>) kullanılır. Bu bilgi cihazınızdan dışarıya aktarılmaz.</p>
 
-        <h2>3. İletişim</h2>
-        <p>Bu Gizlilik Politikası ile ilgili sorularınız için bizimle iletişime geçebilirsiniz: <strong>asametsaygi@gmail.com</strong></p>
-    </section>
+                    <h2><i class="fas fa-child"></i> 5. Çocukların Gizliliği (COPPA / GDPR-K - 13 Yaş Altı)</h2>
+                    <div class="privacy-box warning">
+                        <p><strong>Önemli Güvence:</strong> Network Boss, 13 yaşın (veya kullanıcının ikamet ettiği ülkedeki yasal yaş sınırının) altındaki çocuklardan bilerek herhangi bir kişisel veri (isim, e-posta, konum vb.) toplamaz ve talep etmez.</p>
+                        <p>Eğer bir ebeveyn veya yasal vasi, çocuğunun izni olmaksızın web sitemiz üzerinden e-posta adresi paylaştığını fark ederse, lütfen aşağıdaki iletişim adresinden bizimle irtibata geçsin. İlgili kayıt derhal ve kalıcı olarak veri tabanımızdan silinecektir.</p>
+                    </div>
 
+                    <h2><i class="fas fa-lock"></i> 6. Veri Güvenliği ve Saklama Süresi</h2>
+                    <p>Toplanan e-posta bilgileri SSL/TLS şifreli bağlantılar üzerinden güvenli veri tabanlarında saklanır. Ön kayıt verileri, oyun yayınlanıp ilk duyuru yapıldıktan sonra makul bir süre içerisinde arşivlenir veya kullanıcının talebiyle silinir. İnternet üzerinden gerçekleştirilen hiçbir aktarımın mutlak %100 güvenlik garantisi taşıyamayacağını, ancak verilerinizin korunması için tüm teknik ve idari tedbirlerin alındığını belirtiriz.</p>
+
+                    <h2><i class="fas fa-user-check"></i> 7. Kullanıcı Hakları (KVKK / GDPR / CCPA)</h2>
+                    <p>Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında tüm kullanıcılarımız aşağıdaki haklara sahiptir:</p>
+                    <ul>
+                        <li>Hakkınızda kişisel veri işlenip işlenmediğini öğrenme ve bilgi talep etme,</li>
+                        <li>Ön kayıt listesindeki e-posta adresinizin güncellenmesini isteme,</li>
+                        <li>Kişisel verilerinizin sistemlerimizden <strong>tamamen ve kalıcı olarak silinmesini</strong> talep etme (Unutulma Hakkı),</li>
+                        <li>Gelecekteki e-posta bildirimlerinden dilediğiniz an tek tıkla veya e-posta atarak ayrılma hakkı.</li>
+                    </ul>
+
+                    <h2><i class="fas fa-envelope"></i> 8. İletişim ve Politika Güncellemeleri</h2>
+                    <p>Bu Gizlilik Politikası, yeni oyun özellikleri eklendikçe veya platform yasal gereksinimleri güncellendikçe yenilenebilir. Tüm değişiklikler bu sayfada ilan edilir.</p>
+                    <div class="privacy-box">
+                        <p>Gizlilik haklarınızla ilgili her türlü soru, geri bildirim veya veri silme talebiniz için doğrudan geliştiriciyle iletişime geçebilirsiniz. Talepleriniz en geç 30 gün içinde yanıtlanacaktır:</p>
+                        <p style="margin-top: 10px;">
+                            <strong>Geliştirici:</strong> Samet Saygı<br>
+                            <strong>Resmi E-Posta:</strong> <a href="mailto:contact@networkbossgame.com">contact@networkbossgame.com</a><br>
+                            <strong>Yedek E-Posta:</strong> <a href="mailto:asametsaygi@gmail.com">asametsaygi@gmail.com</a><br>
+                            <strong>Web Sitesi:</strong> <a href="https://networkbossgame.com">https://networkbossgame.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================================================
+                     ENGLISH PRIVACY POLICY
+                     ======================================================== -->
+                <div class="policy-section" id="policyEn">
+                    <h1>Privacy Policy</h1>
+                    <p><em>Last updated: October 8, 2026</em></p>
+                    <p><strong>Network Boss: Telecom Tycoon</strong> (the "Game", covering mobile and PC editions) and the official website (<strong>networkbossgame.com</strong>) are developed and operated by independent game developer <strong>Samet Saygı</strong> ("we", "us", or "our"). This Privacy Policy explains our practices regarding the collection, use, disclosure, and protection of your personal information when you play our game or visit our website.</p>
+
+                    <h2><i class="fas fa-shield-halved"></i> 1. Data Controller & Scope</h2>
+                    <p>The data controller is <strong>Samet Saygı</strong>. This policy applies to all official game releases distributed via <strong>Apple App Store</strong>, <strong>Valve Steam</strong>, and <strong>Google Play</strong>, as well as our official website. We are firmly committed to respecting player privacy and protecting personal data.</p>
+
+                    <h2><i class="fas fa-database"></i> 2. Information We Collect and How We Use It</h2>
+                    <p>Network Boss is intentionally designed with data minimization in mind:</p>
+
+                    <h3>A. Website Pre-Registration & Email Newsletter</h3>
+                    <p>When you voluntarily enter your email address in our website's pre-registration form, we collect and store it solely to inform you of launch dates across Google Play, the App Store, and Steam, share major development updates, and distribute founder pre-registration in-game rewards. We never sell, rent, or monetize your email with third-party advertisers or data brokers.</p>
+
+                    <h3>B. In-Game Progress & Local Save Files</h3>
+                    <p>Your network infrastructure layouts, revenue figures, research unlocks, and staff assignments are stored strictly locally on your device (Persistent Data Path / Local Storage). Your gameplay saves are not uploaded to our proprietary servers linked to your personal identity.</p>
+
+                    <h3>C. Technical & Diagnostic Performance Data</h3>
+                    <p>To ensure game stability, resolve frame drops, and diagnose potential crash logs, non-personally identifiable diagnostic information (device model, operating system version, available RAM, display resolution, and anonymous crash stack traces) may be processed.</p>
+
+                    <h2><i class="fas fa-layer-group"></i> 3. Third-Party Distribution Platforms and Services</h2>
+                    <p>Our game and website integrate with industry-leading third-party platforms for global game distribution, cloud synchronization, and technical diagnostics. These providers process data according to their respective privacy policies:</p>
+                    <ul>
+                        <li>
+                            <strong>Apple App Store & Game Center (Apple Inc.):</strong> iOS application distribution, in-app purchases (IAP), and optional Game Center achievements and cloud sync are handled by Apple.
+                            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>
+                        </li>
+                        <li>
+                            <strong>Valve Steam / Steamworks (Valve Corporation):</strong> PC game distribution, Steam Cloud save backups, Steam achievements, and community features are processed by Valve.
+                            <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener noreferrer">Valve Steam Privacy Agreement</a>
+                        </li>
+                        <li>
+                            <strong>Google Play Services & Analytics (Google LLC):</strong> Android distribution, billing infrastructure, and diagnostic crash tracking are operated by Google.
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+                        </li>
+                        <li>
+                            <strong>Unity Gaming Services (Unity Technologies):</strong> Game engine runtime performance analytics, crash reporting, and rendering optimization.
+                            <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity Privacy Policy</a>
+                        </li>
+                        <li>
+                            <strong>Formspree / Secure Email Dispatch Service:</strong> Secure form processing and database storage used for our pre-registration web portal.
+                            <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a>
+                        </li>
+                    </ul>
+
+                    <h2><i class="fas fa-cookie-bite"></i> 4. Cookies and Local Browser Storage</h2>
+                    <p>Our website (networkbossgame.com) does not use any third-party tracking or behavioral advertising cookies. We only utilize your browser's local storage (<code>localStorage</code>) to remember your preferred language selection (Turkish or English). This value remains strictly on your local device.</p>
+
+                    <h2><i class="fas fa-child"></i> 5. Children's Privacy (COPPA / GDPR-K - Under 13)</h2>
+                    <div class="privacy-box warning">
+                        <p><strong>Protection of Minors:</strong> Network Boss does not knowingly collect or solicit any personal information from children under 13 years of age (or the applicable age limit in your jurisdiction).</p>
+                        <p>If you are a parent or legal guardian and discover that your child has submitted an email address on our website without your consent, please contact us immediately. We will promptly and permanently purge the corresponding record from our database.</p>
+                    </div>
+
+                    <h2><i class="fas fa-lock"></i> 6. Data Security and Retention</h2>
+                    <p>All collected email records are transmitted over SSL/TLS encrypted connections and stored in secure cloud databases. Pre-registration emails are retained only as long as needed to fulfill launch alerts and milestone delivery, or until you request deletion. While no electronic transmission over the Internet is 100% impenetrable, we employ industry-standard administrative and technical safeguards to protect your information.</p>
+
+                    <h2><i class="fas fa-user-check"></i> 7. Your Rights (GDPR / CCPA / KVKK)</h2>
+                    <p>Depending on your jurisdiction, you are entitled to the following privacy rights regarding your personal data:</p>
+                    <ul>
+                        <li>The right to request access to the personal data we hold about you,</li>
+                        <li>The right to request correction of inaccurate or outdated information,</li>
+                        <li>The right to request <strong>permanent deletion (Right to be Forgotten)</strong> of your email address,</li>
+                        <li>The right to withdraw your consent or opt out of pre-registration email announcements at any time.</li>
+                    </ul>
+
+                    <h2><i class="fas fa-envelope"></i> 8. Contact Us & Policy Updates</h2>
+                    <p>We may periodically update this Privacy Policy to reflect platform policy modifications or new game capabilities. Material updates will always be published on this page with an updated revision date.</p>
+                    <div class="privacy-box">
+                        <p>If you have any questions, feedback, or data removal requests regarding this Privacy Policy, please reach out to the developer directly. Requests are resolved within 30 days:</p>
+                        <p style="margin-top: 10px;">
+                            <strong>Developer:</strong> Samet Saygı<br>
+                            <strong>Official Email:</strong> <a href="mailto:contact@networkbossgame.com">contact@networkbossgame.com</a><br>
+                            <strong>Secondary Email:</strong> <a href="mailto:asametsaygi@gmail.com">asametsaygi@gmail.com</a><br>
+                            <strong>Website:</strong> <a href="https://networkbossgame.com">https://networkbossgame.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; color: var(--text-dim); font-size: 0.88rem;" id="footerText">
+            &copy; 2026 Network Boss: Telecom Tycoon. Tüm Hakları Saklıdır. Geliştirici: Samet Saygı.
+        </div>
+    </footer>
+
+    <script>
+        const btnTr = document.getElementById('btnPolicyTr');
+        const btnEn = document.getElementById('btnPolicyEn');
+        const secTr = document.getElementById('policyTr');
+        const secEn = document.getElementById('policyEn');
+        const pageTitle = document.getElementById('pageTitle');
+        const legalBadge = document.getElementById('legalBadge');
+        const btnBackHome = document.getElementById('btnBackHome');
+        const footerText = document.getElementById('footerText');
+
+        function setLanguage(lang) {
+            localStorage.setItem('nb_lang', lang);
+            document.documentElement.lang = lang;
+
+            if (lang === 'en') {
+                btnEn.classList.add('active');
+                btnTr.classList.remove('active');
+                secEn.classList.add('active');
+                secTr.classList.remove('active');
+
+                pageTitle.textContent = 'Privacy Policy | Network Boss: Telecom Tycoon';
+                legalBadge.textContent = 'LEGAL DOCUMENTATION';
+                btnBackHome.innerHTML = '<i class="fas fa-arrow-left"></i> <span>Back to Home</span>';
+                footerText.innerHTML = '&copy; 2026 Network Boss: Telecom Tycoon. All Rights Reserved. Developed by Samet Saygı.';
+            } else {
+                btnTr.classList.add('active');
+                btnEn.classList.remove('active');
+                secTr.classList.add('active');
+                secEn.classList.remove('active');
+
+                pageTitle.textContent = 'Gizlilik Politikası | Network Boss: Telecom Tycoon';
+                legalBadge.textContent = 'HUKUKİ BİLGİLENDİRME';
+                btnBackHome.innerHTML = '<i class="fas fa-arrow-left"></i> <span>Ana Sayfaya Dön</span>';
+                footerText.innerHTML = '&copy; 2026 Network Boss: Telecom Tycoon. Tüm Hakları Saklıdır. Geliştirici: Samet Saygı.';
+            }
+        }
+
+        btnTr.addEventListener('click', () => setLanguage('tr'));
+        btnEn.addEventListener('click', () => setLanguage('en'));
+
+        // Restore language preference from main site
+        const savedLang = localStorage.getItem('nb_lang') || 'tr';
+        setLanguage(savedLang);
+    </script>
 </body>
-
 </html>

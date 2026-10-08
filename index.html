@@ -4,126 +4,1078 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Network Boss: Telecom Tycoon | Pre-Register Now</title>
+    <title>Network Boss: Telecom Tycoon | Resmi Web Sitesi & Ön Kayıt</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" href="assets/img/favicon.png">
-    <meta name="description" content="Manage networks, build infrastructure, and become the ultimate Network Boss. The most realistic telecom tycoon mobile game is coming soon!">
-    <meta name="keywords" content="telecom tycoon, network manager game, idle tycoon, mobile game dev, Network Boss, Samet Saygı, game development">
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Aile evi garajından telekom holdingine! Bakır ve fiber altyapı döşe, baz istasyonları kur, kendi tarifelerini yarat ve şehri birbirine bağla. Network Boss çok yakında iOS, Android ve PC'de.">
+    <meta name="keywords" content="telecom tycoon, network boss, şebeke simülasyonu, mobil oyun, idle tycoon, telekom yönetimi, samet saygı, fiber altyapı, 5G simülasyonu">
     <meta name="author" content="Samet Saygı">
     <link rel="canonical" href="https://networkbossgame.com/">
 
+    <!-- OpenGraph (Facebook, WhatsApp, Discord) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://networkbossgame.com/">
-    <meta property="og:title" content="Network Boss: Telecom Tycoon | Coming Soon">
-    <meta property="og:description" content="Build your telecom empire from scratch. Global launch coming soon to iOS and Android!">
-    <meta property="og:image" content="https://networkbossgame.com/assets/img/network-boss-main-logo.png">
+    <meta property="og:title" content="Network Boss: Telecom Tycoon | Kendi Telekom İmparatorluğunu Kur">
+    <meta property="og:description" content="Kablo döşe, 5G kuleleri dik, tarifelerini belirle ve şehri birbirine bağla! Ön kayıt fırsatlarını kaçırma.">
+    <meta property="og:image" content="https://networkbossgame.com/assets/img/network-boss-coming-soon.png">
 
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://networkbossgame.com/">
     <meta name="twitter:title" content="Network Boss: Telecom Tycoon">
-    <meta name="twitter:description" content="Build your telecom empire from scratch. Pre-register now!">
-    <meta name="twitter:image" content="https://networkbossgame.com/assets/img/network-boss-main-logo.png">
+    <meta name="twitter:description" content="Kendi telekom şirketini yönet. Ön kayıt ol ve lansman ödüllerini kap!">
+    <meta name="twitter:image" content="https://networkbossgame.com/assets/img/network-boss-coming-soon.png">
 
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background-color: #050505; color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex; flex-direction: column;
-            position: relative; overflow-x: hidden;
-        }
-
-        .background-blur {
-            position: fixed; top: -5%; left: -5%; right: -5%; bottom: -5%;
-            background-image: url('assets/img/network-boss-coming-soon.png'); 
-            background-size: cover; background-position: center;
-            filter: blur(25px) brightness(0.25); z-index: -1;
-        }
-
-        .main-content {
-            flex: 1; display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            padding: 30px 20px; z-index: 1;
-        }
-
-        .poster {
-            max-width: 100%;
-            max-height: 60vh; 
-            object-fit: contain; border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-            margin-bottom: 25px;
-        }
-
-        .store-buttons {
-            display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center;
-        }
-
-        .store-btn {
-            display: flex; align-items: center; gap: 10px;
-            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff; text-decoration: none;
-            padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold;
-            transition: all 0.3s ease; backdrop-filter: blur(5px);
-        }
-
-        .store-btn:hover {
-            background: rgba(0, 229, 255, 0.2); border-color: #00e5ff; color: #00e5ff;
-            transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3);
-        }
-
-        .social-icons {
-            display: flex; gap: 20px; margin-bottom: 20px;
-        }
-
-        .social-icons a {
-            color: #aaaaaa; font-size: 28px; text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: #00e5ff; transform: scale(1.2); filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
-        }
-
-        .footer {
-            width: 100%; padding: 15px; text-align: center;
-            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);
-            font-size: 14px; z-index: 10; margin-top: auto;
-        }
-
-        .footer a { color: #00e5ff; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .footer a:hover { color: #ffffff; }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<div class="background-blur"></div>
+    <!-- Ambient Fiber Background Glows -->
+    <canvas id="fiberCanvas"></canvas>
+    <div class="bg-ambient-glow ambient-1"></div>
+    <div class="bg-ambient-glow ambient-2"></div>
+    <div class="bg-ambient-glow ambient-3"></div>
 
-<div class="main-content">
-    <img src="assets/img/network-boss-coming-soon.png" alt="Network Boss Coming Soon" class="poster">
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo-group">
+                <img src="assets/img/network-boss-main-logo.png" alt="Network Boss Logo" class="nav-logo-img">
+                <span class="nav-brand-title">NETWORK <span>BOSS</span></span>
+            </a>
 
-    <div class="store-buttons">
-        <a href="#" class="store-btn"><i class="fab fa-google-play"></i> Google Play</a>
-        <a href="#" class="store-btn"><i class="fab fa-app-store-ios"></i> App Store</a>
-        <a href="#" class="store-btn"><i class="fab fa-steam"></i> Steam</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#loop" class="nav-link" data-i18n="nav.core_loop">Oynanış</a></li>
+                    <li><a href="#features" class="nav-link" data-i18n="nav.features">Özellikler</a></li>
+                    <li><a href="#city-life" class="nav-link" data-i18n="nav.city_life">Şehir & Borsa</a></li>
+                    <li><a href="#techroad" class="nav-link" data-i18n="nav.tech_tree">Teknoloji</a></li>
+                    <li><a href="#simulator" class="nav-link" data-i18n="nav.simulator">Simülatör</a></li>
+                    <li><a href="#story" class="nav-link" data-i18n="nav.story">Hikâye</a></li>
+                    <li><a href="#fleet" class="nav-link" data-i18n="nav.fleet">Filo</a></li>
+                    <li><a href="#gallery" class="nav-link" data-i18n="nav.gallery">Galeri</a></li>
+                    <li><a href="#milestones" class="nav-link" data-i18n="nav.milestones">Hedefler</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language Toggle Button (TR / EN) -->
+                <button type="button" class="lang-toggle-btn" id="langToggleBtn" title="Dili Değiştir / Switch Language">
+                    <i class="fas fa-globe"></i>
+                    <span id="langLabel">EN</span>
+                </button>
+
+                <a href="#preregister" class="btn btn-primary" data-i18n="nav.preregister">Ön Kayıt Ol</a>
+
+                <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menüyü Aç/Kapat">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge" data-i18n="hero.badge">⚡ TÜRKİYE'NİN İLK TELEKOMÜNİKASYON STRATEJİ OYUNU</div>
+                <h1 class="hero-title" data-i18n="hero.title">Kendi Telekom İmparatorluğunu Sıfırdan Kur!</h1>
+                <p class="hero-description" data-i18n="hero.desc">
+                    Aile evinin garajında paslı bir havya ve bakır kablolarla başla; fiber optik hatlar, 5G baz istasyonları ve devasa veri merkezleriyle tüm şehri birbirine bağla.
+                </p>
+
+                <div class="hero-ctas">
+                    <div class="store-badges">
+                        <a href="#preregister" class="store-badge">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-badge-text">
+                                <span class="store-badge-sub" data-i18n="hero.prereg_sub">Çok Yakında</span>
+                                <span class="store-badge-main" data-i18n="hero.googleplay">Google Play</span>
+                            </div>
+                        </a>
+                        <a href="#preregister" class="store-badge">
+                            <i class="fab fa-app-store-ios"></i>
+                            <div class="store-badge-text">
+                                <span class="store-badge-sub" data-i18n="hero.prereg_sub">Çok Yakında</span>
+                                <span class="store-badge-main" data-i18n="hero.appstore">App Store</span>
+                            </div>
+                        </a>
+                        <a href="#preregister" class="store-badge">
+                            <i class="fab fa-steam"></i>
+                            <div class="store-badge-text">
+                                <span class="store-badge-sub" data-i18n="hero.prereg_sub">Çok Yakında</span>
+                                <span class="store-badge-main" data-i18n="hero.steam">Steam / PC</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-media-wrapper">
+                <div class="radar-ring ring-1"></div>
+                <div class="radar-ring ring-2"></div>
+                <div class="radar-ring ring-3"></div>
+
+                <div class="hero-poster-frame">
+                    <img src="assets/img/network-boss-coming-soon.png" alt="Network Boss Coming Soon" class="hero-poster-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. METRICS TICKER BAR -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="metrics-bar">
+                <div class="metric-item">
+                    <div class="metric-val" data-i18n="metrics.tech_val">100+</div>
+                    <div class="metric-lbl" data-i18n="metrics.tech_lbl">Ar-Ge ve Telekom Teknolojisi</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-val" data-i18n="metrics.fleet_val">11</div>
+                    <div class="metric-lbl" data-i18n="metrics.fleet_lbl">Özel Operasyon & Saha Aracı</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-val" data-i18n="metrics.stages_val">Çoklu Harita</div>
+                    <div class="metric-lbl" data-i18n="metrics.stages_lbl">Garajdan Metropole Bölgesel Genişleme</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-val" data-i18n="metrics.sim_val">%100</div>
+                    <div class="metric-lbl" data-i18n="metrics.sim_lbl">Gerçek Zamanlı Trafik & Kapasite Simülasyonu</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 5-STEP CORE LOOP (NASIL OYNANIR?) -->
+    <section class="loop-section" id="loop">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" data-i18n="loop.badge">5 ADIMLI OYUN DÖNGÜSÜ</div>
+                <h2 class="section-title" data-i18n="loop.title">Garajdan Holding Liderliğine Uzanan Döngü</h2>
+                <p class="section-subtitle" data-i18n="loop.subtitle">
+                    Stratejik kararlar, anlık şebeke krizleri ve sürekli genişleyen bir telekomünikasyon dünyası.
+                </p>
+            </div>
+
+            <div class="loop-grid">
+                <!-- Step 1 -->
+                <div class="loop-card">
+                    <div class="loop-header">
+                        <span class="loop-num" data-i18n="loop.step1_num">01</span>
+                        <div class="loop-icon"><i class="fas fa-hammer"></i></div>
+                    </div>
+                    <h3 class="loop-title" data-i18n="loop.step1_title">Altyapı Kur & Ağ Ör</h3>
+                    <p class="loop-desc" data-i18n="loop.step1_desc">
+                        Santraller ve baz istasyonları konuşlandırın, yollar boyunca bakır ve fiber kablolar döşeyin. Kopmalara karşı yedekli halka topolojisi tasarlayın.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="loop-card">
+                    <div class="loop-header">
+                        <span class="loop-num" data-i18n="loop.step2_num">02</span>
+                        <div class="loop-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    </div>
+                    <h3 class="loop-title" data-i18n="loop.step2_title">Özel Paketlerle Abone Çek</h3>
+                    <p class="loop-desc" data-i18n="loop.step2_desc">
+                        Hız, kota ve fiyatı pazarın nabzına göre belirleyin. Esporculardan kurumsal şirketlere farklı kitleleri kendinize bağlayıp nakit akışı yaratın.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="loop-card">
+                    <div class="loop-header">
+                        <span class="loop-num" data-i18n="loop.step3_num">03</span>
+                        <div class="loop-icon"><i class="fas fa-satellite-dish"></i></div>
+                    </div>
+                    <h3 class="loop-title" data-i18n="loop.step3_title">7/24 Şebekeyi Yönet (NOC)</h3>
+                    <p class="loop-desc" data-i18n="loop.step3_desc">
+                        Darboğazları ve ani hat kopmalarını canlı izleyin. Bisikletli ekiplerden ağır vinçlere kadar 11 farklı araçla arızalara anında müdahale edin.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="loop-card">
+                    <div class="loop-header">
+                        <span class="loop-num" data-i18n="loop.step4_num">04</span>
+                        <div class="loop-icon"><i class="fas fa-flask"></i></div>
+                    </div>
+                    <h3 class="loop-title" data-i18n="loop.step4_title">Ar-Ge ile Çağ Atla</h3>
+                    <p class="loop-desc" data-i18n="loop.step4_desc">
+                        Kazanılan kârı Ar-Ge'ye yatırın. 100+ araştırma ile 2G ses hatlarından 5G kentsel kapsama ve uzay çağı 6G uydularına adım atın.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="loop-card">
+                    <div class="loop-header">
+                        <span class="loop-num" data-i18n="loop.step5_num">05</span>
+                        <div class="loop-icon"><i class="fas fa-trophy"></i></div>
+                    </div>
+                    <h3 class="loop-title" data-i18n="loop.step5_title">Farklı Şehirlere Genişle & Rakipleri Satın Al</h3>
+                    <p class="loop-desc" data-i18n="loop.step5_desc">
+                        Mahalle, ilçe ve metropol haritalarına açılarak ağınızı büyütün. Rakiplerin hisselerini borsadan toplayıp onları satın alarak imparatorluğunuzu kurun.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COMPREHENSIVE FEATURES GRID (12 CARDS) -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" data-i18n="features.badge">KAPSAMLI OYUN MEKANİKLERİ</div>
+                <h2 class="section-title" data-i18n="features.title">Sadece Bir Oyun Değil, Yaşayan Bir Şebeke</h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">
+                    Klasik boşta tıklama oyunlarını unutun. Network Boss'ta her kablo metriği, her frekans ve her abone kararı ekonominizi doğrudan etkiler.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feat 1 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Altyapı & Kablolama</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat1.title">Fiziksel Altyapı & Kesintisiz Halka Devreler</h3>
+                    <p class="feature-desc" data-i18n="feat1.desc">
+                        Yollar boyunca gerçekçi rota hesaplama ile bakır ve fiber kablolar döşeyin. Bir hat kopsa bile aboneleri kesintisiz tutan yedekli halka devreler inşa edin.
+                    </p>
+                </div>
+
+                <!-- Feat 2 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Hücresel Kapsama</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat2.title">2G'den 6G ve Uzay Uydularına Hücresel Şebeke</h3>
+                    <p class="feature-desc" data-i18n="feat2.desc">
+                        Geniş kapsama alanına sahip 2G ses kuleleriyle başlayıp yüksek hızlı 4G'ye, caddelerin her köşesini saran modern 5G vericilerine ve dağ köylerine uzaydan internet ulaştıran 6G uydularına evrilin.
+                    </p>
+                </div>
+
+                <!-- Feat 3 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Pazar & Gelir</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat3.title">Özelleştirilebilir Tarife Paketleri</h3>
+                    <p class="feature-desc" data-i18n="feat3.desc">
+                        İndirme hızı (Mbps), kota, dakika, SMS ve fiyat parametrelerini serbestçe belirleyin. Her mahalleye özel cazip teklifler tasarlayarak rakiplerden pazar payı kapın.
+                    </p>
+                </div>
+
+                <!-- Feat 4 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Canlı İzleme & Alarmlar</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat4.title">7/24 Şebeke Operasyon Merkezi (NOC)</h3>
+                    <p class="feature-desc" data-i18n="feat4.desc">
+                        Kritik kapasite darboğazlarını, anlık trafik sıkışıklıklarını ve kablo kopmalarını harita üzerinden canlı izleyin. Ağ uzmanlarıyla kritik arızalara anında müdahale edin.
+                    </p>
+                </div>
+
+                <!-- Feat 5 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Müşteri Hizmetleri</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat5.title">Çağrı Merkezi & Müşteri Terkini Önleme</h3>
+                    <p class="feature-desc" data-i18n="feat5.desc">
+                        Arıza anlarında telefonlar kilitlenmeden müşteri temsilcilerini devreye sokun. Bekleme sürelerini kısaltıp sadakat indirimleriyle abonelerin rakip operatörlere kaçmasını engelleyin.
+                    </p>
+                </div>
+
+                <!-- Feat 6 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Demografi & Talep</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat6.title">Farklı Müşteri Grupları ve İhtiyaçlar</h3>
+                    <p class="feature-desc" data-i18n="feat6.desc">
+                        Her bina farklıdır! Sıfır gecikme (düşük ping) isteyen esporcular, kesintisiz özel hat arayan holdingler, bütçe dostu aileler ve bol kotalı mobil gençler.
+                    </p>
+                </div>
+
+                <!-- Feat 7 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Kurumsal Sözleşmeler</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat7.title">Dev Şirketlerle Kurumsal Anlaşmalar (B2B)</h3>
+                    <p class="feature-desc" data-i18n="feat7.desc">
+                        Bankalar, hastaneler ve kamu binaları için tek saniye kopmayan garantili özel hatlar döşeyin. Taahhüdünüzü (SLA) korursanız devasa kazanç elde edin, aksatırsanız ceza ödeyin!
+                    </p>
+                </div>
+
+                <!-- Feat 8 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Enerji & Güvenlik</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-charging-station"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat8.title">Şehir Elektrik Kesintileri & Jeneratör Lojistiği</h3>
+                    <p class="feature-desc" data-i18n="feat8.desc">
+                        Bölgesel elektrik kesintilerinde baz istasyonlarınız susmasın! Kulelerinize dizel yedek jeneratörler kurun, yakıt ikmalini aksatmayın ve şebekenizi ayakta tutun.
+                    </p>
+                </div>
+
+                <!-- Feat 9 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Kriz Yönetimi</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat9.title">Rastgele Krizler, Fırtınalar & Siber Saldırılar</h3>
+                    <p class="feature-desc" data-i18n="feat9.desc">
+                        Baz istasyonlarını deviren şiddetli fırtınalar, rakiplerin düzenlediği siber saldırılar, enerji krizleri veya devlet altyapı teşvikleri ile canlı bir operasyon yönetin.
+                    </p>
+                </div>
+
+                <!-- Feat 10 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Rekabet & Yapay Zeka</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat10.title">Agresif Rakipler & Pazar Payı Savaşı</h3>
+                    <p class="feature-desc" data-i18n="feat10.desc">
+                        Saldırgan ve fırsatçı yapay zeka operatörlerine karşı mahalle mahalle mücadele edin. Fiyat kırma taktiklerine karşı koyun ve pazarın mutlak lideri olun.
+                    </p>
+                </div>
+
+                <!-- Feat 11 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Departmanlar & Filo</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-truck-pickup"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat11.title">Uzman Departmanlar & 11 Araçlık Saha Filosu</h3>
+                    <p class="feature-desc" data-i18n="feat11.desc">
+                        Teknisyenlerden siber güvenlikçilere 8 farklı departman rolü kurun. Personelinizi eğitin, bisikletten dev vinçlere ve helikoptere kadar 11 araçla operasyonu hızlandırın.
+                    </p>
+                </div>
+
+                <!-- Feat 12 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Çoklu Şehir Simülasyonu</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat12.title">Bölgesel Haritalara Genişleme & Çevrimdışı Büyüme</h3>
+                    <p class="feature-desc" data-i18n="feat12.desc">
+                        Garajdan mahalleye, ilçeden metropol haritalarına açılarak şirketinizi dev bir holdinge dönüştürün. Siz oyunda değilken bile şebekeniz arka planda tıkır tıkır işlemeye devam eder!
+                    </p>
+                </div>
+
+                <!-- Feat 13 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Gayrimenkul & Strateji</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat13.title">Arsa Kiralama & Kalıcı Tapu Satın Alma</h3>
+                    <p class="feature-desc" data-i18n="feat13.desc">
+                        Kule ve santraller için her ay arsa kirası ödemek zorunda değilsiniz. Sermayenizi biriktirip arsayı tapusuyla satın alarak sabit kira giderlerinden sonsuza dek kurtulun!
+                    </p>
+                </div>
+
+                <!-- Feat 14 -->
+                <div class="feature-card">
+                    <span class="feature-tag">İnsan Kaynakları & Ar-Ge</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-id-card-clip"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat14.title">Sinematik Personel Transferi & Efsanevi Kartlar</h3>
+                    <p class="feature-desc" data-i18n="feat14.desc">
+                        2.5D animasyonlu kart açılımlarıyla altın değerinde baş mühendisler ve siber güvenlik uzmanları transfer edin; ekiplerinizi krizleri önleyecek rollerde görevlendirin.
+                    </p>
+                </div>
+
+                <!-- Feat 15 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Saha Bakımı & Dayanıklılık</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat15.title">Fiziksel Hat Aşınması & Önleyici Bakım</h3>
+                    <p class="feature-desc" data-i18n="feat15.desc">
+                        Yoğun veri trafiği ve hava şartları zamanla kabloları yıpratır. Ani hat kopmalarını önlemek için teknisyenlerinizi düzenli kontrol ve önleyici bakıma gönderin.
+                    </p>
+                </div>
+
+                <!-- Feat 16 -->
+                <div class="feature-card">
+                    <span class="feature-tag">Finans & Likidite</span>
+                    <div class="feature-icon-box">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feat16.title">5 Banka Kredisi Türü & Finansal Yönetim</h3>
+                    <p class="feature-desc" data-i18n="feat16.desc">
+                        İşletme, yatırım, büyüme, acil durum veya yapılandırma kredileriyle sermayenizi büyütün; borç ve nakit dengesini koruyarak iflas riskini lehinize çevirin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TECHNOLOGY EVOLUTION ROAD -->
+    <section class="techroad-section" id="techroad">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge badge-amber" data-i18n="techroad.badge">AR-GE VE TEKNOLOJİ YOLU</div>
+                <h2 class="section-title" data-i18n="techroad.title">Bakır Kablolardan Yörünge Uydularına</h2>
+                <p class="section-subtitle" data-i18n="techroad.subtitle">
+                    Telekomünikasyon tarihinin tüm dönüm noktalarını şirketinizde teknoloji ağacıyla birebir yaşayın.
+                </p>
+            </div>
+
+            <div class="techroad-tracks">
+                <!-- Track 1: Fixed-line -->
+                <div class="techroad-track">
+                    <div class="techroad-track-title-wrap">
+                        <i class="fas fa-network-wired"></i>
+                        <h3 class="techroad-track-title" data-i18n="techroad.fixed_title">Sabit Hat & Omurga Evrimi</h3>
+                    </div>
+                    <div class="techroad-grid">
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">Kademe 1</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.copper">Bakır (ADSL)</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.copper_desc">Düşük maliyet, yağmurda oksitlenme riski ve mesafe kısıtı.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">Kademe 2</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.vdsl">Saha Dolabı (VDSL)</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.vdsl_desc">Sokak başına dolap, kısaltılmış bakır hattı ve 100 Mbps hız.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">Kademe 3</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.fiber">Fiber Optik (FTTH)</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.fiber_desc">Işık hızında iletim, sıfıra yakın ping ve kurumsal omurga.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge badge-amber-alt">İleri Seviye</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.ring">Korumalı Halka (Ring)</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.ring_desc">Yedekli devreler sayesinde fiziksel kopmalarda sıfır kesinti.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 2: Wireless -->
+                <div class="techroad-track">
+                    <div class="techroad-track-title-wrap">
+                        <i class="fas fa-tower-cell"></i>
+                        <h3 class="techroad-track-title" data-i18n="techroad.mobile_title">Hücresel & Kablosuz Şebeke Evrimi</h3>
+                    </div>
+                    <div class="techroad-grid">
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">1. Nesil</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.2g">2G GSM</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.2g_desc">Geniş kapsama, sesli arama geliri, kule başına 100 kişi kapasite.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">2. Nesil</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.3g">3G UMTS</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.3g_desc">İlk mobil veri geliri ve mobil web çağının başlangıcı.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">3. Nesil</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.4g">4G LTE</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.4g_desc">Yüksek veri hacmi, mobil video servisleri ve yüksek kâr.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge">4. Nesil</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.5g">5G NR</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.5g_desc">Caddelerin ve sokakların her köşesine kurulan yüksek hızlı vericilerle kesintisiz mobil internet.</p>
+                        </div>
+                        <div class="techroad-card">
+                            <span class="techroad-step-badge badge-amber-alt">Gelecek</span>
+                            <h4 class="techroad-card-name" data-i18n="techroad.6g">6G & Uydu Ağı</h4>
+                            <p class="techroad-card-desc" data-i18n="techroad.6g_desc">Yörünge uydularıyla dağ köylerine uzaydan kesintisiz şebeke.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. YAŞAYAN ŞEHİR & BORSA (LIVING CITY & FINANCE) -->
+    <section class="citylife-section" id="city-life">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" data-i18n="citylife.badge">YAŞAYAN DÜNYA VE FİNANS</div>
+                <h2 class="section-title" data-i18n="citylife.title">Şehrin Nabzı, Sosyal Medya ve Borsa</h2>
+                <p class="section-subtitle" data-i18n="citylife.subtitle">
+                    Network Boss'ta kurduğunuz her hat şehirde yankı bulur; vatandaşlar canlı tweet atar, şirketinizin hisseleri borsada işlem görür.
+                </p>
+            </div>
+
+            <div class="citylife-grid">
+                <!-- Left: Chirper Live Feed Mockup -->
+                <div class="chirper-feed-box">
+                    <div class="chirper-header">
+                        <div class="chirper-brand">
+                            <div class="chirper-logo-icon"><i class="fas fa-feather-alt"></i></div>
+                            <div>
+                                <h3 class="chirper-title" data-i18n="citylife.chirper_title">Chirper: Canlı Sosyal Medya Akışı</h3>
+                                <span style="font-size: 0.78rem; color: var(--text-dim);" data-i18n="citylife.chirper_sub">Halkın memnuniyeti doğrudan şirketinizin itibarını ve hisse değerini belirler.</span>
+                            </div>
+                        </div>
+                        <div class="chirper-live-indicator">
+                            <span class="pulse-dot"></span>
+                            <span>CANLI</span>
+                        </div>
+                    </div>
+
+                    <div class="chirper-tweets-list">
+                        <!-- Tweet 1 -->
+                        <div class="chirper-tweet-item">
+                            <div class="tweet-user-row">
+                                <div class="tweet-author-info">
+                                    <div class="tweet-author-avatar"><i class="fas fa-gamepad"></i></div>
+                                    <div>
+                                        <div class="tweet-user-name" data-i18n="citylife.tweet1_user">TeknoFan42</div>
+                                        <div class="tweet-handle" data-i18n="citylife.tweet1_handle">@ping_zero · Esporcu</div>
+                                    </div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim);">1dk</span>
+                            </div>
+                            <p class="tweet-content" data-i18n="citylife.tweet1_text">
+                                Yeni fiber paketini bağlattığımdan beri pingim 4ms! Turnuva maçında tek kare takılma yok, helal olsun! 🔥
+                            </p>
+                        </div>
+
+                        <!-- Tweet 2 -->
+                        <div class="chirper-tweet-item">
+                            <div class="tweet-user-row">
+                                <div class="tweet-author-info">
+                                    <div class="tweet-author-avatar"><i class="fas fa-heart"></i></div>
+                                    <div>
+                                        <div class="tweet-user-name" data-i18n="citylife.tweet2_user">Fatma Teyze</div>
+                                        <div class="tweet-handle" data-i18n="citylife.tweet2_handle">@fatma_teyze · Mahalle Sakini</div>
+                                    </div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim);">12dk</span>
+                            </div>
+                            <p class="tweet-content" data-i18n="citylife.tweet2_text">
+                                Almanya'daki torunumla donmadan görüntülü konuştuk ya, Allah bu genç mühendislerden razı olsun. Çayınız hazır evladım!
+                            </p>
+                        </div>
+
+                        <!-- Tweet 3 -->
+                        <div class="chirper-tweet-item">
+                            <div class="tweet-user-row">
+                                <div class="tweet-author-info">
+                                    <div class="tweet-author-avatar"><i class="fas fa-briefcase"></i></div>
+                                    <div>
+                                        <div class="tweet-user-name" data-i18n="citylife.tweet3_user">Mehmet Aydın</div>
+                                        <div class="tweet-handle" data-i18n="citylife.tweet3_handle">@maydin_ceo · Finans Direktörü</div>
+                                    </div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim);">35dk</span>
+                            </div>
+                            <p class="tweet-content" data-i18n="citylife.tweet3_text">
+                                Hastanemiz ve banka şubelerimiz için kurulan garantili özel fiber hat sayesinde sistemlerimiz tek saniye bile kesilmedi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Stock Market & Live Events -->
+                <div class="citylife-cards-stack">
+                    <!-- Stock Box -->
+                    <div class="stock-market-box">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="badge" style="margin-bottom: 0;">BORSA & FİNANS</span>
+                            <span style="font-size: 0.8rem; color: var(--signal-green); font-weight: 700;">CANLI PİYASA</span>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-top: 14px; margin-bottom: 8px;" data-i18n="citylife.stock_title">SignalStock Borsa & Şirket Satın Alma</h4>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55;" data-i18n="citylife.stock_desc">
+                            Şirketiniz büyüdükçe borsaya açılın. Rakip telekom firmalarının hisselerini toplayarak çoğunluk payına (%51) ulaşın ve onları satın alarak (Hostile Takeover) altyapılarını kendi ağınıza katın!
+                        </p>
+
+                        <div class="stock-metrics-grid">
+                            <div class="stock-metric-card">
+                                <div class="stock-metric-lbl" data-i18n="citylife.stock_stat1_lbl">Hisse Değeri</div>
+                                <div class="stock-metric-val" data-i18n="citylife.stock_stat1_val">$142.80 (+18.4%)</div>
+                            </div>
+                            <div class="stock-metric-card">
+                                <div class="stock-metric-lbl" data-i18n="citylife.stock_stat2_lbl">Halk Memnuniyeti</div>
+                                <div class="stock-metric-val" data-i18n="citylife.stock_stat2_val">%94 Pozitif</div>
+                            </div>
+                            <div class="stock-metric-card">
+                                <div class="stock-metric-lbl" data-i18n="citylife.stock_stat3_lbl">Rakip Pazar Payı</div>
+                                <div class="stock-metric-val" style="color: var(--amber-copper);" data-i18n="citylife.stock_stat3_val">%12 (Geriliyor)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Highlight: Events & COW -->
+                    <div class="city-highlight-card">
+                        <div class="city-highlight-icon"><i class="fas fa-truck-monster"></i></div>
+                        <div class="city-highlight-content">
+                            <h4 data-i18n="citylife.events_title">Stadyum Derbileri & Kalabalık Etkinlikler</h4>
+                            <p data-i18n="citylife.events_desc">
+                                Kent meydanındaki festivallerde veya 50 bin kişilik stadyum maçlarında anlık internet patlaması yaşanır. Hemen Mobil Baz İstasyonu (COW) kamyonunuzu bölgeye sevk edin ve dev hasılat toplayın!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Highlight: Day/Night -->
+                    <div class="city-highlight-card">
+                        <div class="city-highlight-icon"><i class="fas fa-moon"></i></div>
+                        <div class="city-highlight-content">
+                            <h4 data-i18n="citylife.daynight_title">Gece/Gündüz Döngüsü & Parlayan Veri Akışı</h4>
+                            <p data-i18n="citylife.daynight_desc">
+                                Akşam çöktüğünde şehir karanlığa gömülürken sokak lambaları yanar; yer altı ve havai fiber kablolarınız üzerinden geçen veri neon mavi ve kehribar ışıklar gibi akar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE PACKAGE SIMULATOR -->
+    <section class="simulator-section" id="simulator">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge badge-amber" data-i18n="sim.badge">İNTERAKTİF DENEYİM</div>
+                <h2 class="section-title" data-i18n="sim.title">Kendi İnternet Paketini Tasarla!</h2>
+                <p class="section-subtitle" data-i18n="sim.subtitle">
+                    Hemen şimdi bir telekom yöneticisi gibi düşünün. Hız, kota ve fiyatı ayarlayarak pazarın nasıl tepki vereceğini test edin.
+                </p>
+            </div>
+
+            <div class="simulator-box">
+                <!-- Controls -->
+                <div class="sim-controls">
+                    <div class="sim-slider-group">
+                        <div class="sim-slider-header">
+                            <span data-i18n="sim.speed_lbl">İndirme Hızı:</span>
+                            <span class="sim-slider-val" id="simSpeedVal">100 Mbps</span>
+                        </div>
+                        <input type="range" class="sim-range" id="simSpeed" min="8" max="1000" step="10" value="100">
+                    </div>
+
+                    <div class="sim-slider-group">
+                        <div class="sim-slider-header">
+                            <span data-i18n="sim.quota_lbl">Aylık Kota:</span>
+                            <span class="sim-slider-val" id="simQuotaVal">200 GB</span>
+                        </div>
+                        <input type="range" class="sim-range" id="simQuota" min="20" max="600" step="20" value="200">
+                    </div>
+
+                    <div class="sim-slider-group">
+                        <div class="sim-slider-header">
+                            <span data-i18n="sim.price_lbl">Aylık Abonelik Ücreti:</span>
+                            <span class="sim-slider-val" id="simPriceVal">$45 / ay</span>
+                        </div>
+                        <input type="range" class="sim-range" id="simPrice" min="10" max="150" step="5" value="45">
+                    </div>
+                </div>
+
+                <!-- Simulation Output -->
+                <div class="sim-screen">
+                    <div class="sim-meter-group">
+                        <div class="sim-meter-header">
+                            <span data-i18n="sim.market_share">Tahmini Pazar Çekiciliği</span>
+                            <strong id="simMeterVal">%65</strong>
+                        </div>
+                        <div class="sim-progress-bar">
+                            <div class="sim-progress-fill" id="simMeterFill"></div>
+                        </div>
+                    </div>
+
+                    <div class="sim-kpis">
+                        <div class="sim-kpi-card">
+                            <div class="sim-kpi-val" id="simSubsVal">+1,200</div>
+                            <div class="sim-kpi-lbl" data-i18n="sim.subs_gain">Aylık Abone Artışı</div>
+                        </div>
+                        <div class="sim-kpi-card">
+                            <div class="sim-kpi-val" id="simRevenueVal">$54,000</div>
+                            <div class="sim-kpi-lbl" data-i18n="sim.revenue">Tahmini Aylık Gelir</div>
+                        </div>
+                    </div>
+
+                    <!-- Elif Speech Feedback -->
+                    <div class="elif-reaction-box">
+                        <img src="assets/img/characters/elif_main.png" alt="Elif" class="elif-avatar-img" id="elifAvatar">
+                        <p class="elif-dialogue-text" id="elifSpeech">
+                            "Dengeli bir paket. Sabit gelir akışı sağlar ve ağ yükünü kontrol altında tutar. Tam bir mühendis aklı!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. STORY & CHARACTERS -->
+    <section class="characters-section" id="story">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" data-i18n="char.badge">KADRO VE HİKÂYE</div>
+                <h2 class="section-title" data-i18n="char.title">Garajın Kapısını Çalan İlk İnsanlar</h2>
+                <p class="section-subtitle" data-i18n="char.subtitle">
+                    Network Boss soğuk rakamlardan ibaret değildir; dokunduğunuz her hat, mahallenin kaderini değiştirir.
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="char-tabs">
+                <button class="char-tab-btn active" data-char="elif">Elif</button>
+                <button class="char-tab-btn" data-char="fatma">Fatma Teyze</button>
+                <button class="char-tab-btn" data-char="murat">Murat</button>
+                <button class="char-tab-btn" data-char="selin">Selin</button>
+                <button class="char-tab-btn" data-char="deniz">Deniz</button>
+            </div>
+
+            <!-- Character Profile Display Card -->
+            <div class="char-display-card">
+                <div class="char-portrait-frame">
+                    <img src="assets/img/characters/elif_main.png" alt="Character Portrait" class="char-portrait-img" id="charImg">
+                </div>
+                <div class="char-details">
+                    <span class="badge char-role-badge" id="charRole">Kurucu Ortak & Baş Mühendis</span>
+                    <h3 class="char-name" id="charName">Elif</h3>
+                    <p class="char-quote" id="charQuote">"Aile evinin bu küçük garajından bir telekom devi doğuracağız, bana güven!"</p>
+                    <p class="char-bio" id="charBio">
+                        Teknik dehamız ve en yakın ortağımız. Kablo lehimlemeyi, 5G baz istasyonu frekans hesaplamalarını ve kriz anında NOC yönetimini gözü kapalı halleder. Oyuncunun en sadık yol göstericisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FLEET & FIELD VEHICLES -->
+    <section class="fleet-section" id="fleet">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge badge-amber" data-i18n="fleet.badge">FİLO & YÜKSELTME</div>
+                <h2 class="section-title" data-i18n="fleet.title">Yükseltilebilir ve Özelleştirilebilir 11 Saha Aracı</h2>
+                <p class="section-subtitle" data-i18n="fleet.subtitle">
+                    Basit bisikletlerden 50 metrelik vinçlere ve helikoptere kadar 11 aracı seviye seviye güçlendirin, hız ve kapasitelerini artırın, özel kaplamalarla filonuzu donatın.
+                </p>
+            </div>
+
+            <div class="fleet-grid">
+                <!-- Vehicle 1: Bisiklet -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/bisiklet.PNG" alt="Bisiklet" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.bike_name">Teknisyen Bisikleti</h4>
+                    <p class="fleet-role" data-i18n="fleet.bike_role">Hafif arızalar için hızlı ve yakıt masrafsız acil müdahale.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier1">Bölge: Garaj Başlangıcı</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2: Motosiklet -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/motosiklet.PNG" alt="Motosiklet" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.moto_name">Hızlı Müdahale Motoru</h4>
+                    <p class="fleet-role" data-i18n="fleet.moto_role">Trafikte sıkışmadan mahalle içi kablo onarımlarına yetişir.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier1">Bölge: Garaj Başlangıcı</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3: Kablo Kamyonu -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/kablokamyon.PNG" alt="Kablo Kamyonu" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.truck_name">Kablo Kamyonu</h4>
+                    <p class="fleet-role" data-i18n="fleet.truck_role">Ağır fiber makaralarını taşıyan ve yer altı kazısı yapan temel filo gücü.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier2">Bölge: Mahalle Ağı</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 4: Minibüs -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/minibus.PNG" alt="Minibüs" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.minibus_name">Operasyon Minibüsü</h4>
+                    <p class="fleet-role" data-i18n="fleet.minibus_role">Büyük saha ekiplerini ve test cihazlarını taşıyan mobil laboratuvar.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier2">Bölge: Mahalle Ağı</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 5: Pickup -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/pickup.PNG" alt="Pickup" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.pickup_name">Servis Pikabı</h4>
+                    <p class="fleet-role" data-i18n="fleet.pickup_role">Engebeli arazilerdeki yüksek tepe kulelerine malzeme ulaştırır.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier3">Bölge: İlçe Genişlemesi</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 6: Mobil Baz İstasyonu -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/mobilbazistasyonu.PNG" alt="Mobil Baz İstasyonu" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.mobtower_name">Mobil Baz İstasyonu</h4>
+                    <p class="fleet-role" data-i18n="fleet.mobtower_role">Festivallerde ve kriz anlarında geçici kapsama alanı sağlar.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier3">Bölge: İlçe Genişlemesi</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 7: Mobil Komuta -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/mobilkomuta.PNG" alt="Mobil Komuta" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.mobcom_name">Mobil Komuta Merkezi</h4>
+                    <p class="fleet-role" data-i18n="fleet.mobcom_role">Doğal afetlerde saha koordinasyonunu sağlayan uydu bağlantılı araç.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier3">Bölge: İlçe Genişlemesi</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 8: Vinç -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/vinc.PNG" alt="Vinç" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.crane_name">Ağır Hizmet Vinci</h4>
+                    <p class="fleet-role" data-i18n="fleet.crane_role">50 metrelik kafes baz istasyonu kulelerinin montajı için vazgeçilmez.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier4">Bölge: Metropol Holding</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 9: Drone -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/drone.PNG" alt="Drone" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.drone_name">Sinyal Teşhis Drone'u</h4>
+                    <p class="fleet-role" data-i18n="fleet.drone_role">Kule tepesindeki vericileri tırmanmadan denetler, arıza tespit eder.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier3">Bölge: İlçe Genişlemesi</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 10: Helikopter -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/helikopter.PNG" alt="Helikopter" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.heli_name">Hava Filosu Helikopteri</h4>
+                    <p class="fleet-role" data-i18n="fleet.heli_role">Dağlık bölgelerde kule kontrolü ve hava hattı çekiminde kullanılır.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier4">Bölge: Metropol Holding</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.upgradeable">1-10 Sv. Yükseltilebilir</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle 11: Signal Prime -->
+                <div class="fleet-card">
+                    <img src="assets/img/vehicles/signalprime.PNG" alt="Signal Prime" class="fleet-img">
+                    <h4 class="fleet-name" data-i18n="fleet.prime_name">Signal Prime (Özel)</h4>
+                    <p class="fleet-role" data-i18n="fleet.prime_role">Lüks şirket filosu; holding seviyesinde itibar ve yüksek verimlilik sunar.</p>
+                    <div class="fleet-meta-row">
+                        <span class="fleet-tier-tag" data-i18n="fleet.tier4">Bölge: Metropol Holding</span>
+                        <span class="fleet-upgrade-tag" data-i18n="fleet.custom_skin">Özel Siber Kaplama</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SCREENSHOTS & MEDIA GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" data-i18n="gallery.badge">OYUN İÇİ VİTRİN</div>
+                <h2 class="section-title" data-i18n="gallery.title">Oyun İçi Ekran Görüntüleri & Haritalar</h2>
+                <p class="section-subtitle" data-i18n="gallery.subtitle">
+                    Geliştirme sürecinden ilk harita ve altyapı görüntüleri. Yakında daha fazla görsel eklenecektir!
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Screenshot 1 -->
+                <div class="gallery-item" data-full="assets/img/screenshots/screenshot_1.jpg">
+                    <img src="assets/img/screenshots/screenshot_1.jpg" alt="Metropol Haritası" class="gallery-thumb">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title" data-i18n="gallery.pic1_title">Metropol Şehir ve Kıyı Bölgesi</h4>
+                        <span class="gallery-sub" data-i18n="gallery.pic1_sub">Açık alanlar, kıyı şeritleri ve yerleşim merkezlerinin kuşbakışı haritası.</span>
+                    </div>
+                    <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Screenshot 2 -->
+                <div class="gallery-item" data-full="assets/img/screenshots/screenshot_2.jpg">
+                    <img src="assets/img/screenshots/screenshot_2.jpg" alt="İlçe Haritası" class="gallery-thumb">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title" data-i18n="gallery.pic2_title">İlçe Genişleme Haritası</h4>
+                        <span class="gallery-sub" data-i18n="gallery.pic2_sub">Sektörler arası fiber omurga ve yüksek kapasiteli santral planlaması.</span>
+                    </div>
+                    <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Screenshot 3: Placeholder ready for user drop -->
+                <div class="gallery-item" data-full="assets/img/network-boss-coming-soon.png">
+                    <img src="assets/img/network-boss-coming-soon.png" alt="NOC Operasyon Merkezi" class="gallery-thumb">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title" data-i18n="gallery.placeholder_title">NOC Operasyon Merkezi & Altyapı</h4>
+                        <span class="gallery-sub" data-i18n="gallery.placeholder_sub">Yakında eklenecek yeni ekran görüntüleri için ayrılmıştır.</span>
+                    </div>
+                    <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close-btn" id="lightboxClose" aria-label="Kapat">&times;</button>
+            <img src="" alt="Tam Boyut Ekran Görüntüsü" class="lightbox-img" id="lightboxImg">
+        </div>
     </div>
 
-    <div class="social-icons">
-        <a href="https://instagram.com/networkbossgame" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/networkbossgame" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://youtube.com/@networkbossgame" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="https://tiktok.com/@networkbossgame" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-</div>
+    <!-- 8. PRE-REGISTRATION STRETCH GOALS / MILESTONES -->
+    <section class="milestones-section" id="milestones">
+        <div class="container">
+            <div class="milestones-container">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <div class="badge badge-amber" data-i18n="milestones.badge">TOPLULUK HEDEFLERİ</div>
+                    <h2 class="section-title" data-i18n="milestones.title">Ön Kayıt Hedefleri & Özel Ödüller</h2>
+                    <p class="section-subtitle" data-i18n="milestones.subtitle">
+                        Ön kayıt yaptıran herkes, oyun çıktığında bu hediyelerin tamamına oyun içi posta kutusundan sahip olacak!
+                    </p>
+                </div>
 
-<div class="footer">
-    © 2026 asamet.dev | 
-    <a href="privacy.html">Privacy Policy</a> | 
-    <a href="mailto:contact@networkbossgame.com">Contact</a>
-</div>
+                <div class="milestones-timeline">
+                    <!-- Tier 1 -->
+                    <div class="milestone-card unlocked">
+                        <span class="milestone-status-badge" data-i18n="milestones.unlocked">Tamamlandı</span>
+                        <div class="milestone-goal" data-i18n="milestone1.goal">1.000 Kayıt</div>
+                        <div class="milestone-reward-title" data-i18n="milestone1.title">Başlangıç Sermayesi</div>
+                        <div class="milestone-reward-desc" data-i18n="milestone1.desc">Şirketinizi kurduğunuzda ekstra $1.000 nakit ve 50 RP.</div>
+                    </div>
 
+                    <!-- Tier 2 -->
+                    <div class="milestone-card locked">
+                        <span class="milestone-status-badge" data-i18n="milestones.locked">Kilitli</span>
+                        <div class="milestone-goal" data-i18n="milestone2.goal">5.000 Kayıt</div>
+                        <div class="milestone-reward-title" data-i18n="milestone2.title">Nostaljik Garaj Tabelası</div>
+                        <div class="milestone-reward-desc" data-i18n="milestone2.desc">Garajınız için özel altın kaplama şirket tabelası ve Elif özel kıyafeti.</div>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="milestone-card locked">
+                        <span class="milestone-status-badge" data-i18n="milestones.locked">Kilitli</span>
+                        <div class="milestone-goal" data-i18n="milestone3.goal">10.000 Kayıt</div>
+                        <div class="milestone-reward-title" data-i18n="milestone3.title">Signal Prime Neon Kaplama</div>
+                        <div class="milestone-reward-desc" data-i18n="milestone3.desc">Efsanevi operasyon aracı için özel siber-neon boya deseni.</div>
+                    </div>
+
+                    <!-- Tier 4 -->
+                    <div class="milestone-card locked">
+                        <span class="milestone-status-badge" data-i18n="milestones.locked">Kilitli</span>
+                        <div class="milestone-goal" data-i18n="milestone4.goal">25.000 Kayıt</div>
+                        <div class="milestone-reward-title" data-i18n="milestone4.title">Kurucu Baş Mühendis Rozeti</div>
+                        <div class="milestone-reward-desc" data-i18n="milestone4.desc">Lansmana özel 500 Bits ve profilinizde parlayan kalıcı unvan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PRE-REGISTER FORM -->
+    <section class="prereg-section" id="preregister">
+        <div class="container">
+            <div class="prereg-box">
+                <div class="badge" data-i18n="prereg.badge">YERİNİ ŞİMDİDEN AYIRT</div>
+                <h2 class="section-title" data-i18n="prereg.title">Lansman Günü İlk Sinyali Sen Gönder!</h2>
+                <p class="section-subtitle" data-i18n="prereg.subtitle">
+                    E-posta adresini bırak, oyun Google Play, App Store ve Steam'de yayınlandığı anda bildirim al ve kurucu ödüllerini kap.
+                </p>
+
+                <form class="prereg-form" id="preregForm">
+                    <div class="form-group-row">
+                        <input type="email" class="form-input" id="userEmail" required placeholder="E-posta adresinizi girin (örn: isim@domain.com)" data-i18n-placeholder="prereg.placeholder_email">
+                        
+                        <select class="form-platform-select" id="userPlatform" aria-label="Platform">
+                            <option value="Android" data-i18n="prereg.platform_android">Android (Google Play)</option>
+                            <option value="iOS" data-i18n="prereg.platform_ios">iOS (App Store)</option>
+                            <option value="PC" data-i18n="prereg.platform_pc">PC / Steam</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-i18n="prereg.btn_submit">Hemen Ön Kayıt Ol</span>
+                    </button>
+
+                    <div class="form-response-msg" id="formResponseMsg"></div>
+
+                    <p class="form-notice" data-i18n="prereg.privacy_note">
+                        🔒 E-postanız asla üçüncü taraflarla paylaşılmaz ve yalnızca oyun bildirimleri için kullanılır.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo-group">
+                    <img src="assets/img/network-boss-main-logo.png" alt="Network Boss Logo" style="height: 38px;">
+                    <div>
+                        <div class="nav-brand-title">NETWORK <span>BOSS</span></div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim);" data-i18n="footer.tagline">Türkiye'nin en kapsamlı telekomünikasyon ve şebeke simülasyonu.</p>
+                    </div>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com/networkbossgame" target="_blank" class="social-icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/networkbossgame" target="_blank" class="social-icon-btn" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://youtube.com/@networkbossgame" target="_blank" class="social-icon-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://tiktok.com/@networkbossgame" target="_blank" class="social-icon-btn" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Network Boss. <span data-i18n="footer.rights">Tüm Hakları Saklıdır.</span>
+                    <span style="display: block; font-size: 0.8rem; color: var(--text-dim);" data-i18n="footer.developed_by">Geliştirici: Samet Saygı</span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                    <a href="mailto:contact@networkbossgame.com" data-i18n="footer.contact">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
