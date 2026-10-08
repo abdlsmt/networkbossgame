@@ -2554,6 +2554,32 @@ nav {
 /* ==========================================================================
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================================================== */
+@media (max-width: 1140px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(7, 10, 18, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--border-glass);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+    }
+    
+    .nav-links.mobile-open {
+        display: flex;
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
 @media (max-width: 992px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -2606,30 +2632,6 @@ nav {
     
     .citylife-grid {
         grid-template-columns: 1fr;
-    }
-@media (max-width: 1140px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(7, 10, 18, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 24px;
-        gap: 18px;
-        border-bottom: 1px solid var(--border-glass);
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
-    }
-    
-    .nav-links.mobile-open {
-        display: flex;
-    }
-    
-    .mobile-nav-toggle {
-        display: block;
     }
 }
 
