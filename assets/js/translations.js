@@ -15,11 +15,10 @@ const translations = {
         "nav.story": "Hikâye",
         "nav.fleet": "Filo",
         "nav.gallery": "Galeri",
-        "nav.milestones": "Hedefler",
         "nav.preregister": "Ön Kayıt",
         
         // Hero Section
-        "hero.badge": "⚡ TÜRKİYE'NİN İLK TELEKOMÜNİKASYON STRATEJİ OYUNU",
+        "hero.badge": "⚡ KENDİ TELEKOM ŞİRKETİNİ KUR VE YÖNET",
         "hero.title": "Kendi Telekom İmparatorluğunu Sıfırdan Kur!",
         "hero.desc": "Aile evinin garajında paslı bir havya ve bakır kablolarla başla; fiber optik hatlar, 5G baz istasyonları ve devasa veri merkezleriyle tüm şehri birbirine bağla.",
         "hero.googleplay": "Google Play",
@@ -29,14 +28,14 @@ const translations = {
         "hero.discord": "Topluluğa Katıl",
 
         // Metrics Bar
-        "metrics.tech_val": "100+",
-        "metrics.tech_lbl": "Ar-Ge ve Telekom Teknolojisi",
+        "metrics.tech_val": "Ar-Ge",
+        "metrics.tech_lbl": "Kapsamlı Telekom Teknolojileri",
         "metrics.fleet_val": "11",
-        "metrics.fleet_lbl": "Özelleştirilebilir Saha Aracı",
+        "metrics.fleet_lbl": "Farklı Saha Aracı",
         "metrics.stages_val": "Çoklu Harita",
         "metrics.stages_lbl": "Garajdan Metropole Bölgesel Genişleme",
-        "metrics.sim_val": "%100",
-        "metrics.sim_lbl": "Gerçek Zamanlı Trafik & Kapasite Simülasyonu",
+        "metrics.sim_val": "Canlı",
+        "metrics.sim_lbl": "Trafik & Kapasite Yönetimi",
 
         // Core Loop Section
         "loop.badge": "5 ADIMLI OYUN DÖNGÜSÜ",
@@ -50,10 +49,10 @@ const translations = {
         "loop.step2_desc": "Hız, kota ve fiyatı pazarın nabzına göre belirleyin. Esporculardan kurumsal devlere farklı kitleleri kendinize bağlayıp nakit akışı yaratın.",
         "loop.step3_num": "03",
         "loop.step3_title": "7/24 Şebekeyi Yönet (NOC)",
-        "loop.step3_desc": "Kritik kapasite darboğazlarını ve ani hat kopmalarını canlı izleyin. Bisikletli ekiplerden dev vinçlere kadar 11 farklı araçla arızalara anında müdahale edin.",
+        "loop.step3_desc": "Kapasite darboğazlarını ve hat arızalarını izleyin. Uygun çalışan ve araçla iş kuyruklarını yöneterek hizmeti yeniden çalıştırın.",
         "loop.step4_num": "04",
         "loop.step4_title": "Ar-Ge ile Çağ Atla",
-        "loop.step4_desc": "Kazanılan kârı Ar-Ge'ye yatırın. 100+ araştırma ile 2G ses hatlarından 5G kentsel küçük hücrelere ve uzay çağı 6G uydularına adım atın.",
+        "loop.step4_desc": "Kazanılan kârı Ar-Ge'ye yatırın. Bakırdan fibere, 2G'den 5G'ye uzanan teknoloji yolunda ağınızı ve işletmenizi geliştirin.",
         "loop.step5_num": "05",
         "loop.step5_title": "Farklı Şehirlere Genişle & Rakipleri Satın Al",
         "loop.step5_desc": "Mahalle, ilçe ve metropol haritalarına açılarak ağınızı büyütün. Rakiplerin hisselerini borsadan toplayıp onları satın alarak imparatorluğunuzu kurun.",
@@ -61,16 +60,16 @@ const translations = {
         // Features Section
         "features.badge": "KAPSAMLI OYUN MEKANİKLERİ",
         "features.title": "Sadece Bir Oyun Değil, Yaşayan Bir Şebeke",
-        "features.subtitle": "Klasik boşta tıklama oyunlarını unutun. Network Boss'ta her kablo metriği, her frekans ve her abone kararı ekonominizi doğrudan etkiler.",
+        "features.subtitle": "Altyapı, tarife, müşteri ve operasyon kararları birbirini etkiler. Büyürken ağınızın kapasitesini ve şirketinizin giderlerini birlikte düşünün.",
         
-        "feat1.title": "Fiziksel Altyapı & Kesintisiz Halka Devreler",
-        "feat1.desc": "Yollar boyunca gerçekçi rota hesaplama ile bakır ve fiber kablolar döşeyin. Bir hat kopsa bile aboneleri kesintisiz tutan yedekli halka devreler inşa edin.",
+        "feat1.title": "Fiziksel Altyapı & Yedekli Bağlantılar",
+        "feat1.desc": "Yollar boyunca bakır ve fiber hatlar döşeyin, yedek bağlantılarla kesinti riskini azaltın. İki kablo aynı kazı güzergâhını paylaşıyorsa aynı olay ikisini de etkileyebilir; yedek kapasitesini de kontrol edin.",
         
-        "feat2.title": "2G'den 6G ve Uzay Uydularına Hücresel Şebeke",
-        "feat2.desc": "Geniş kapsama alanına sahip 2G ses kuleleriyle başlayıp yüksek hızlı 4G'ye, caddelerin her köşesini saran modern 5G vericilerine ve dağ köylerine uzaydan internet ulaştıran 6G uydularına evrilin.",
+        "feat2.title": "2G'den 5G'ye Hücresel Şebeke",
+        "feat2.desc": "2G kuleleriyle başlayıp 3G, 4G ve 5G teknolojilerine ilerleyin. Kule konumu, ağ beslemesi ve kapasiteyi birlikte yönetin. 6G ve uydu başlıkları gelecek teknoloji planlarıdır.",
         
         "feat3.title": "Özelleştirilebilir Tarife Paketleri",
-        "feat3.desc": "İndirme hızı (Mbps), kota, dakika, SMS ve fiyat parametrelerini serbestçe belirleyin. Her mahalleye özel cazip teklifler tasarlayarak rakiplerden pazar payı kapın.",
+        "feat3.desc": "Teknoloji ve fiyat sınırları içinde hız, kota, dakika, SMS ve ücretinizi belirleyin. Ucuz paket müşteri çekebilir; oluşan talebi kablonuz, kuleniz ve merkeziniz taşıyabilmeli.",
         
         "feat4.title": "7/24 Şebeke Operasyon Merkezi (NOC)",
         "feat4.desc": "Kritik kapasite darboğazlarını, anlık trafik sıkışıklıklarını ve kablo kopmalarını harita üzerinden canlı izleyin. Ağ uzmanlarıyla kritik arızalara anında müdahale edin.",
@@ -79,10 +78,10 @@ const translations = {
         "feat5.desc": "Arıza anlarında telefonlar kilitlenmeden müşteri temsilcilerini devreye sokun. Bekleme sürelerini kısaltıp sadakat indirimleriyle abonelerin rakip operatörlere kaçmasını engelleyin.",
         
         "feat6.title": "Farklı Müşteri Grupları ve İhtiyaçlar",
-        "feat6.desc": "Her bina farklıdır! Sıfır gecikme (düşük ping) isteyen esporcular, kesintisiz özel hat arayan holdingler, bütçe dostu aileler ve bol kotalı mobil gençler.",
+        "feat6.desc": "Her bina farklıdır! Bütçe, standart ve premium müşteriler fiyat, kalite ve markayı farklı değerlendirir. Aynı teklif her müşteri grubunda aynı çekiciliği yaratmaz.",
         
         "feat7.title": "Dev Şirketlerle Kurumsal Anlaşmalar (B2B)",
-        "feat7.desc": "Bankalar, hastaneler ve kamu binaları için tek saniye kopmayan garantili özel hatlar döşeyin. Kesintisiz Hizmet Taahhüdünüzü (SLA) korursanız devasa kazanç elde edin, aksatırsanız ceza ödeyin!",
+        "feat7.desc": "Kurumsal müşterilerle fiyat, hizmet sürekliliği taahhüdü (SLA) ve ihlal cezasını birlikte müzakere edin. Daha yüksek gelir hedeflerken gerekli kapasiteyi ve bağlantı korumasını hazırlayın.",
         
         "feat8.title": "Şehir Elektrik Kesintileri & Jeneratör Lojistiği",
         "feat8.desc": "Bölgesel elektrik kesintilerinde baz istasyonlarınız susmasın! Kulelerinize dizel yedek jeneratörler kurun, yakıt ikmalini aksatmayın ve şebekenizi ayakta tutun.",
@@ -94,7 +93,7 @@ const translations = {
         "feat10.desc": "Saldırgan ve fırsatçı yapay zeka operatörlerine karşı mahalle mahalle mücadele edin. Fiyat kırma taktiklerine karşı koyun ve pazarın mutlak lideri olun.",
         
         "feat11.title": "Uzman Departmanlar & 11 Araçlık Saha Filosu",
-        "feat11.desc": "Teknisyenlerden siber güvenlikçilere 8 farklı departman rolü kurun. Personelinizi eğitin, bisikletten dev vinçlere ve helikoptere kadar 11 araçla operasyonu hızlandırın.",
+        "feat11.desc": "Saha ekibi kurulum yapar, tekniker onarır; uygun çalışan ve araç işlerin ilerlemesini etkiler. Personelinizi eğitin, farklı uzmanlıkları ve 11 araçlık filoyu iş ihtiyacına göre değerlendirin.",
         
         "feat12.title": "Bölgesel Haritalara Genişleme & Çevrimdışı Büyüme",
         "feat12.desc": "Garajdan mahalleye, ilçeden metropol haritalarına açılarak şirketinizi dev bir holdinge dönüştürün. Siz oyunda değilken bile şebekeniz arka planda tıkır tıkır işlemeye devam eder!",
@@ -109,7 +108,7 @@ const translations = {
         "feat15.desc": "Yoğun veri trafiği ve hava şartları zamanla kabloları yıpratır. Ani hat kopmalarını önlemek için teknisyenlerinizi düzenli kontrol ve önleyici bakıma gönderin.",
 
         "feat16.title": "5 Banka Kredisi Türü & Finansal Yönetim",
-        "feat16.desc": "İşletme, yatırım, büyüme, acil durum veya yapılandırma kredileriyle sermayenizi büyütün; borç ve nakit dengesini koruyarak iflas riskini lehinize çevirin.",
+        "feat16.desc": "İşletme, yatırım, büyüme, acil nakit ve borç yapılandırma seçeneklerini değerlendirin. Yeni yatırımın gelirini maaş, enerji, kira ve kredi taksitleriyle birlikte düşünün.",
 
         // Living City & Finance Section
         "citylife.badge": "YAŞAYAN DÜNYA VE FİNANS",
@@ -141,8 +140,8 @@ const translations = {
 
         // Technology Evolution Road
         "techroad.badge": "AR-GE VE TEKNOLOJİ YOLU",
-        "techroad.title": "Bakır Kablolardan Yörünge Uydularına",
-        "techroad.subtitle": "Telekomünikasyon tarihinin tüm dönüm noktalarını şirketinizde teknoloji ağacıyla birebir yaşayın.",
+        "techroad.title": "Bakırdan Fibere, 2G'den 5G'ye",
+        "techroad.subtitle": "Mevcut teknoloji yollarıyla şirketinizi geliştirin. 6G ve uydu başlıkları gelecek planları olarak ayrıca gösterilir.",
         "techroad.fixed_title": "Sabit Hat & Omurga Evrimi",
         "techroad.mobile_title": "Hücresel & Kablosuz Şebeke Evrimi",
         "techroad.copper": "Bakır (ADSL)",
@@ -150,19 +149,20 @@ const translations = {
         "techroad.vdsl": "Saha Dolabı (VDSL)",
         "techroad.vdsl_desc": "Sokak başına dolap, kısaltılmış bakır hattı ve 100 Mbps hız.",
         "techroad.fiber": "Fiber Optik (FTTH)",
-        "techroad.fiber_desc": "Işık hızında iletim, sıfıra yakın ping ve kurumsal omurga.",
+        "techroad.fiber_desc": "Daha yüksek bant genişliği, düşük gecikmeli hizmet ve kurumsal bağlantılar.",
         "techroad.ring": "Korumalı Halka (Ring)",
-        "techroad.ring_desc": "Yedekli devreler sayesinde fiziksel kopmalarda sıfır kesinti.",
+        "techroad.ring_desc": "Sağlam alternatif ve yeterli kapasiteyle kesinti riskini azaltın; ortak güzergâh riskini hesaba katın.",
         "techroad.2g": "2G GSM",
-        "techroad.2g_desc": "Geniş kapsama, sesli arama geliri, kule başına 100 kişi kapasite.",
+        "techroad.2g_desc": "Mobil hizmetin başlangıcı. Güncel temel 2G kulede 30 bağlantı sınırı.",
         "techroad.3g": "3G UMTS",
         "techroad.3g_desc": "İlk mobil veri geliri ve mobil web çağının başlangıcı.",
         "techroad.4g": "4G LTE",
         "techroad.4g_desc": "Yüksek veri hacmi, mobil video servisleri ve yüksek kâr.",
         "techroad.5g": "5G NR",
-        "techroad.5g_desc": "Caddelerin ve sokakların her köşesine kurulan yüksek hızlı vericilerle kesintisiz mobil internet.",
+        "techroad.5g_desc": "Daha güçlü mobil hizmet için kapsama, kapasite ve altyapı yatırımını dengeleyin.",
         "techroad.6g": "6G & Uydu Ağı",
-        "techroad.6g_desc": "Yörünge uydularıyla dağ köylerine uzaydan kesintisiz şebeke.",
+        "techroad.6g_desc": "Gelecek teknoloji başlıkları; mevcut araştırma akışında henüz açılmıyor.",
+        "techroad.future": "Gelecek Planı",
 
         // Simulator Section
         "sim.badge": "İNTERAKTİF DENEYİM",
@@ -173,8 +173,9 @@ const translations = {
         "sim.price_lbl": "Aylık Abonelik Ücreti:",
         "sim.unlimited": "Sınırsız",
         "sim.market_share": "Tahmini Pazar Çekiciliği",
-        "sim.subs_gain": "Aylık Abone Artışı",
-        "sim.revenue": "Tahmini Aylık Gelir",
+        "sim.subs_gain": "Temsili Abone Artışı",
+        "sim.revenue": "Temsili Aylık Gelir",
+        "demo.disclaimer": "Mekaniği açıklayan temsili deneydir; gerçek oyun sonuçlarını, abone sayısını veya geliri tahmin etmez.",
         "sim.elif_dialogue_great": "\"Harika bir teklif! Bu hız ve fiyata mahalledeki herkes kapımızda kuyruk olur, hemen santral kapasitesini artıralım!\"",
         "sim.elif_dialogue_expensive": "\"Fiyat çok yüksek görünüyor! Bu şartlarda müşteriler aboneliğini iptal edip rakip operatöre geçer!\"",
         "sim.elif_dialogue_cheap": "\"Bu kadar düşük fiyata gigabit hız satarsak santral elektrik faturasını bile çıkaramayız! Biraz kâr marjı bırakmalıyız.\"",
@@ -222,7 +223,7 @@ const translations = {
         "noc.fiber.c0_title": "Yedek Ring (Halka) Devresini Devreye Sok + Fiber Ekibini Sevk Et",
         "noc.fiber.c0_desc": "Trafiği ters halkadan 1.2 saniyede döndür, sahaya fiber füzyon kaynak minibüsünü sür.",
         "noc.fiber.c0_res_title": "Kusursuz Mühendislik Zaferi!",
-        "noc.fiber.c0_res_desc": "Sinyal milisaniyeler içinde ters yönden dolandı. Aboneler kesintiyi fark etmedi bile! Arıza ekibi kabloyu onarırken şebeke %100 kesintisiz çalışmaya devam etti.",
+        "noc.fiber.c0_res_desc": "Bu temsili senaryoda sağlam yedek güzergâh ve yeterli kapasite sayesinde trafik alternatif yola geçti. Ekip ana hattı onarırken hizmet yedek bağlantı üzerinden sürdü.",
         "noc.fiber.c0_chirper": "\"Oha maç yayını tek saniye bile donmadı! İşte gerçek telekom altyapısı bu, helal olsun @NetworkBoss!\"",
         "noc.fiber.c1_title": "Bölgeye Yalnızca COW (Mobil Baz İstasyonu) Kamyonu Sevk Et",
         "noc.fiber.c1_desc": "Mobil veriyi havadan kurtar ancak yer altı fiber hattını beklemeye al.",
@@ -320,7 +321,7 @@ const translations = {
         
         "char.murat_role": "Ağır Kullanıcı & Gamer",
         "char.murat_name": "Murat",
-        "char.murat_quote": "\"Bana sıfır ping ve gigabit hız lazım usta! Online maçta bağlantı koparsa bütün mahalleyi ayağa kaldırırım!\"",
+        "char.murat_quote": "\"Bana düşük ping ve hızlı internet lazım usta! Online maçta bağlantı koparsa bütün mahalleyi ayağa kaldırırım!\"",
         "char.murat_bio": "Yüksek indirme hızı ve ultra düşük gecikme isteyen sabırsız müşteri profili. Memnun kalırsa bütün arkadaşlarını firmanıza abone yapar, mağdur olursa sosyal medyada linç eder.",
 
         "char.selin_role": "Home-Office & Freelancer",
@@ -335,12 +336,8 @@ const translations = {
 
         // Fleet Section
         "fleet.badge": "FİLO & YÜKSELTME",
-        "fleet.title": "Yükseltilebilir ve Özelleştirilebilir 11 Saha Aracı",
-        "fleet.subtitle": "Basit bisikletlerden 50 metrelik vinçlere ve helikoptere kadar 11 aracı seviye seviye güçlendirin, hız ve kapasitelerini artırın, özel kaplamalarla filonuzu donatın.",
-        "fleet.tier1": "Bölge: Garaj Başlangıcı",
-        "fleet.tier2": "Bölge: Mahalle Ağı",
-        "fleet.tier3": "Bölge: İlçe Genişlemesi",
-        "fleet.tier4": "Bölge: Metropol Holding",
+        "fleet.title": "11 Farklı Saha Aracı",
+        "fleet.subtitle": "Bisikletten vinç ve helikoptere kadar filonuzu göreve uygun seçin. Mobil baz istasyonunun (COW) mevcut 10 seviyeli yükseltme yolunda kapasitesini geliştirin.",
         
         "fleet.bike_name": "Teknisyen Bisikleti",
         "fleet.bike_role": "Hafif arızalar için hızlı ve yakıt masrafsız acil müdahale.",
@@ -368,37 +365,18 @@ const translations = {
         // Gallery
         "gallery.badge": "OYUN İÇİ VİTRİN",
         "gallery.title": "Oyun İçi Ekran Görüntüleri & Haritalar",
-        "gallery.subtitle": "Geliştirme sürecinden ilk harita ve altyapı görüntüleri. Yakında daha fazla görsel eklenecektir!",
+        "gallery.subtitle": "Network Boss dünyasından harita görselleri.",
         "gallery.pic1_title": "Metropol Şehir ve Kıyı Bölgesi",
-        "gallery.pic1_sub": "Açık alanlar, kıyı şeritleri ve yerleşim merkezlerinin kuşbakışı haritası.",
+        "gallery.pic1_sub": "Harita tanıtım görseli; oyun arayüzü ekranı değildir.",
         "gallery.pic2_title": "İlçe Genişleme Haritası",
-        "gallery.pic2_sub": "Sektörler arası fiber omurga ve yüksek kapasiteli santral planlaması.",
+        "gallery.pic2_sub": "Harita tanıtım görseli; oyun arayüzü ekranı değildir.",
         "gallery.placeholder_title": "NOC Operasyon Merkezi & Altyapı",
         "gallery.placeholder_sub": "Yakında eklenecek yeni ekran görüntüleri için ayrılmıştır.",
-
-        // Milestones
-        "milestones.badge": "TOPLULUK HEDEFLERİ",
-        "milestones.title": "Ön Kayıt Hedefleri & Özel Ödüller",
-        "milestones.subtitle": "Ön kayıt yaptıran herkes, oyun çıktığında bu hediyelerin tamamına oyun içi posta kutusundan sahip olacak!",
-        "milestones.unlocked": "Tamamlandı",
-        "milestones.locked": "Kilitli",
-        "milestone1.goal": "1.000 Kayıt",
-        "milestone1.title": "Başlangıç Sermayesi",
-        "milestone1.desc": "Şirketinizi kurduğunuzda ekstra $1.000 nakit ve 50 RP.",
-        "milestone2.goal": "5.000 Kayıt",
-        "milestone2.title": "Nostaljik Garaj Tabelası",
-        "milestone2.desc": "Garajınız için özel altın kaplama şirket tabelası ve Elif özel kıyafeti.",
-        "milestone3.goal": "10.000 Kayıt",
-        "milestone3.title": "Signal Prime Neon Kaplama",
-        "milestone3.desc": "Efsanevi operasyon aracı için özel siber-neon boya deseni.",
-        "milestone4.goal": "25.000 Kayıt",
-        "milestone4.title": "Kurucu Baş Mühendis Rozeti",
-        "milestone4.desc": "Lansmana özel 500 Bits ve profilinizde parlayan kalıcı unvan.",
 
         // Pre-registration Form
         "prereg.badge": "YERİNİ ŞİMDİDEN AYIRT",
         "prereg.title": "Lansman Günü İlk Sinyali Sen Gönder!",
-        "prereg.subtitle": "E-posta adresini bırak, oyun Google Play, App Store ve Steam'de yayınlandığı anda bildirim al ve kurucu ödüllerini kap.",
+        "prereg.subtitle": "E-posta adresini bırak, oyunun çıkışı ve önemli geliştirme haberleri hakkında bildirim al.",
         "prereg.placeholder_email": "E-posta adresinizi girin (örn: isim@domain.com)",
         "prereg.platform_label": "Cihazınız:",
         "prereg.platform_android": "Android (Google Play)",
@@ -407,7 +385,9 @@ const translations = {
         "prereg.btn_submit": "Hemen Ön Kayıt Ol",
         "prereg.privacy_note": "🔒 E-postanız asla üçüncü taraflarla paylaşılmaz ve yalnızca oyun bildirimleri için kullanılır.",
         "prereg.success_msg": "🎉 Başarılı! Ön kaydınız alındı. Ağ dünyasına hoş geldin Baş Mühendis!",
-        "prereg.error_msg": "⚠️ Bir hata oluştu. Lütfen geçerli bir e-posta adresi girdiğinizden emin olun.",
+        "prereg.error_msg": "⚠️ Gönderim sonucu doğrulanamadı. E-posta adresiniz korundu; tekrar göndermeden önce contact@networkbossgame.com üzerinden bilgi alabilirsiniz.",
+        "prereg.unconfirmed_msg": "Talebiniz gönderildi ancak sunucu kayıt onayı okunamıyor. Bu bir kesin kayıt onayı değildir; tekrar göndermeden önce contact@networkbossgame.com üzerinden bilgi alabilirsiniz.",
+        "prereg.invalid_msg": "Lütfen geçerli bir e-posta adresi girin.",
 
         // Footer
         "footer.tagline": "Türkiye'nin en kapsamlı telekomünikasyon ve şebeke simülasyonu.",
@@ -428,11 +408,10 @@ const translations = {
         "nav.story": "Story",
         "nav.fleet": "Fleet",
         "nav.gallery": "Gallery",
-        "nav.milestones": "Milestones",
         "nav.preregister": "Pre-Register",
         
         // Hero Section
-        "hero.badge": "THE DEFINITIVE TELECOM STRATEGY SIMULATION",
+        "hero.badge": "BUILD AND MANAGE YOUR TELECOM COMPANY",
         "hero.title": "Build Your Telecom Empire from Scratch!",
         "hero.desc": "Start in the family garage with a soldering iron and copper cables; connect entire cities with fiber optics, 5G base stations, and massive data centers.",
         "hero.googleplay": "Google Play",
@@ -442,14 +421,14 @@ const translations = {
         "hero.discord": "Join Discord",
 
         // Metrics Bar
-        "metrics.tech_val": "100+",
-        "metrics.tech_lbl": "R&D Telecom Technologies",
+        "metrics.tech_val": "R&D",
+        "metrics.tech_lbl": "Extensive Telecom Technologies",
         "metrics.fleet_val": "11",
-        "metrics.fleet_lbl": "Customizable Field Vehicles",
+        "metrics.fleet_lbl": "Different Field Vehicles",
         "metrics.stages_val": "Multi-Map",
         "metrics.stages_lbl": "Regional Expansion: Garage to Metropolis",
-        "metrics.sim_val": "100%",
-        "metrics.sim_lbl": "Real-time Traffic & Bandwidth Simulation",
+        "metrics.sim_val": "Live",
+        "metrics.sim_lbl": "Traffic & Capacity Management",
 
         // Core Loop Section
         "loop.badge": "THE 5-STEP CORE LOOP",
@@ -457,16 +436,16 @@ const translations = {
         "loop.subtitle": "Strategic masterminding, high-stakes outages, and relentless network expansion.",
         "loop.step1_num": "01",
         "loop.step1_title": "Deploy & Route",
-        "loop.step1_desc": "Erect cellular towers and central offices, trench copper and fiber along realistic city streets, and design fail-safe protected ring circuits.",
+        "loop.step1_desc": "Build towers and exchanges, run copper and fiber along city streets, and design backup connections to reduce outage risks.",
         "loop.step2_num": "02",
         "loop.step2_title": "Attract & Monetize",
         "loop.step2_desc": "Tailor bandwidth, quotas, and pricing to market demographics. Connect esports gamers, suburban families, and corporate enterprises for steady cash flow.",
         "loop.step3_num": "03",
         "loop.step3_title": "Monitor & Dispatch (NOC)",
-        "loop.step3_desc": "Watch real-time traffic spikes and physical line cuts. Dispatch technicians with 11 specialized vehicles from agile bicycles to 50-meter crane trucks.",
+        "loop.step3_desc": "Monitor capacity bottlenecks and line faults. Manage job queues with suitable staff and vehicles to restore service.",
         "loop.step4_num": "04",
         "loop.step4_title": "Research & Modernize",
-        "loop.step4_desc": "Reinvest profits into R&D laboratories. Unlock 100+ technologies, evolving from legacy 2G copper to 5G small cells and orbital satellite constellations.",
+        "loop.step4_desc": "Reinvest profits into R&D. Develop your network and business along technology paths from copper to fiber and from 2G to 5G.",
         "loop.step5_num": "05",
         "loop.step5_title": "Expand Across Cities & Acquire Rivals",
         "loop.step5_desc": "Scale across neighborhoods, districts, and metropolitan maps. Acquire rival operators on the stock market and establish total dominance.",
@@ -474,16 +453,16 @@ const translations = {
         // Features Section
         "features.badge": "AUTHENTIC TYCOON MECHANICS",
         "features.title": "Not Just a Clicker — A Living, Breathing Network",
-        "features.subtitle": "Forget superficial idle games. In Network Boss, every cable route, frequency band, and subscriber pricing decision directly drives your balance sheet.",
+        "features.subtitle": "Infrastructure, plans, customers and operations affect each other. Consider network capacity and company expenses together as you grow.",
         
-        "feat1.title": "Physical Grid & Redundant Ring Circuits",
-        "feat1.desc": "Trench copper and fiber along authentic street grids. Build redundant ring topologies so traffic instantly reroutes when a main cable snaps.",
+        "feat1.title": "Physical Infrastructure & Backup Connections",
+        "feat1.desc": "Run copper and fiber along streets and reduce outage risks with backup connections. If two cables share an excavation route, the same incident can affect both; check backup capacity too.",
         
-        "feat2.title": "Cellular Evolution: 2G to 6G & Satellites",
-        "feat2.desc": "Start with broad-coverage 2G voice towers, advance through 4G LTE, deploy ultra-dense 5G transmitters across city streets, and launch 6G satellites to remote valleys.",
+        "feat2.title": "Cellular Evolution: 2G to 5G",
+        "feat2.desc": "Start with 2G towers and progress through 3G, 4G and 5G. Manage tower locations, backhaul and capacity together. 6G and satellite topics are future technology plans.",
         
         "feat3.title": "Custom Tariff & Plan Engine",
-        "feat3.desc": "Freely dial download speeds, monthly bandwidth quotas, talk minutes, SMS, and subscription rates to craft offers that capture market share from rivals.",
+        "feat3.desc": "Set speed, quota, minutes, SMS and price within technology and pricing limits. Low prices can attract customers, but cables, towers and your exchange must carry the resulting demand.",
         
         "feat4.title": "24/7 Network Operations Center (NOC)",
         "feat4.desc": "Track live overload warnings, packet loss, and physical line cuts. Dispatch network administrators to isolate critical bottlenecks before subscribers churn.",
@@ -492,10 +471,10 @@ const translations = {
         "feat5.desc": "Prevent mass subscriber cancellations during major outages. Train support agents to resolve customer tickets and deploy competitive retention packages.",
         
         "feat6.title": "Diverse Demographics & Customer Needs",
-        "feat6.desc": "Buildings are unique ecosystems: latency-sensitive gamers demanding low ping, corporate banking headquarters needing guaranteed fiber, and heavy mobile streamers.",
+        "feat6.desc": "Every building is different. Budget, standard and premium customers weigh price, quality and brand differently. The same offer is not equally attractive to every audience.",
         
         "feat7.title": "Enterprise Contracts & Guaranteed Uptime",
-        "feat7.desc": "Deploy dedicated private lines for hospitals and financial institutions with zero-downtime Service Commitments (SLA). Maintain uptime for massive profits, or pay breach penalties!",
+        "feat7.desc": "Negotiate price, service-continuity commitments (SLA) and breach penalties together with business customers. Prepare capacity and connection protection while pursuing higher revenue.",
         
         "feat8.title": "Power Outages & Generator Logistics",
         "feat8.desc": "Keep cell towers broadcasting during municipal power grid blackouts! Install diesel backup generators, manage fuel reserves, and research automated refueling logistics.",
@@ -507,7 +486,7 @@ const translations = {
         "feat10.desc": "Clash with aggressive and opportunist rival AI operators. Counter predatory pricing, reclaim district market shares, and dominate the telecom landscape.",
         
         "feat11.title": "Specialized Departments & 11-Vehicle Fleet",
-        "feat11.desc": "Recruit staff across 8 specialized roles from engineers to cyber defense. Level up technicians and deploy 11 specialized vehicles from bikes to heavy cranes and helicopters.",
+        "feat11.desc": "Field crews build and technicians repair; suitable staff and vehicles affect job progress. Train employees and match specialist roles and your 11-vehicle fleet to operational needs.",
         
         "feat12.title": "Regional Expansion & Offline Simulation",
         "feat12.desc": "Seamless multi-region expansion across Garage, Neighborhood, District, and Metropolis. The headless simulation engine continues processing while you're offline.",
@@ -522,7 +501,7 @@ const translations = {
         "feat15.desc": "Heavy traffic and weathering wear down lines over time. Dispatch technicians for preventative maintenance before unexpected physical outages strike.",
 
         "feat16.title": "5 Bank Loan Types & Liquidity Strategy",
-        "feat16.desc": "Leverage operational, investment, growth, emergency, or restructuring loans to fuel expansion; balance debt-to-equity ratios to thrive without insolvency.",
+        "feat16.desc": "Consider operating, investment, growth, emergency cash and debt restructuring options. Weigh investment revenue alongside salaries, power, rent and loan instalments.",
 
         // Living City & Finance Section
         "citylife.badge": "LIVING WORLD & FINANCE",
@@ -554,8 +533,8 @@ const translations = {
 
         // Technology Evolution Road
         "techroad.badge": "R&D & TECHNOLOGY EVOLUTION",
-        "techroad.title": "From Garage Copper to Orbital Satellites",
-        "techroad.subtitle": "Relive every pivotal milestone of telecommunications history within your own technology tree.",
+        "techroad.title": "Copper to Fiber, 2G to 5G",
+        "techroad.subtitle": "Develop your company along existing technology paths. 6G and satellite topics are shown separately as future plans.",
         "techroad.fixed_title": "Fixed-Line & Backbone Evolution",
         "techroad.mobile_title": "Cellular & Wireless Evolution",
         "techroad.copper": "Copper (ADSL)",
@@ -563,19 +542,20 @@ const translations = {
         "techroad.vdsl": "Street Cabinets (VDSL)",
         "techroad.vdsl_desc": "Neighborhood street cabinets, shortened copper loops, up to 100 Mbps.",
         "techroad.fiber": "Fiber Optic (FTTH)",
-        "techroad.fiber_desc": "Light-speed transmission, minimal ping, indispensable for enterprises.",
+        "techroad.fiber_desc": "Higher bandwidth, low-latency service and business connections.",
         "techroad.ring": "Protected Ring Circuits",
-        "techroad.ring_desc": "Redundant loops ensuring zero downtime during physical cable breaks.",
+        "techroad.ring_desc": "Reduce outage risks with a healthy alternative and enough capacity; account for shared-route risks.",
         "techroad.2g": "2G GSM",
-        "techroad.2g_desc": "Vast coverage, pure voice revenues, 100 connection cap per mast.",
+        "techroad.2g_desc": "The start of mobile service. The current basic 2G tower has a 30-connection limit.",
         "techroad.3g": "3G UMTS",
         "techroad.3g_desc": "First mobile data streams and cellular web browsing adoption.",
         "techroad.4g": "4G LTE",
         "techroad.4g_desc": "High-speed mobile data, streaming video bandwidth, high ARPU.",
         "techroad.5g": "5G NR",
-        "techroad.5g_desc": "Ultra-fast mobile internet powered by high-speed micro-transmitters across city streets.",
+        "techroad.5g_desc": "Balance coverage, capacity and infrastructure investment for stronger mobile service.",
         "techroad.6g": "6G & Satellite Mesh",
-        "techroad.6g_desc": "LEO constellation beams internet to remote valleys from orbit.",
+        "techroad.6g_desc": "Future technology topics; not yet available in the current research flow.",
+        "techroad.future": "Future Plan",
 
         // Simulator Section
         "sim.badge": "INTERACTIVE PREVIEW",
@@ -586,8 +566,9 @@ const translations = {
         "sim.price_lbl": "Monthly Subscription:",
         "sim.unlimited": "Unlimited",
         "sim.market_share": "Market Attractiveness",
-        "sim.subs_gain": "Monthly Sub Growth",
-        "sim.revenue": "Est. Monthly Revenue",
+        "sim.subs_gain": "Illustrative Sub Growth",
+        "sim.revenue": "Illustrative Monthly Revenue",
+        "demo.disclaimer": "An illustrative experiment explaining the mechanic; it does not predict actual game outcomes, subscriber counts or revenue.",
         "sim.elif_dialogue_great": "\"Incredible deal! Customers are queuing up outside the garage, let's upgrade our central exchange immediately!\"",
         "sim.elif_dialogue_expensive": "\"Price is too steep! Customers will churn to competitor operators at this rate!\"",
         "sim.elif_dialogue_cheap": "\"Selling gigabit speed this cheap won't even cover our electricity bills! We need a healthier profit margin.\"",
@@ -635,7 +616,7 @@ const translations = {
         "noc.fiber.c0_title": "Engage Redundant Ring Route + Dispatch Fiber Splicing Crew",
         "noc.fiber.c0_desc": "Reroute optical traffic clockwise in 1.2s; send the mobile fiber fusion splicing van to site.",
         "noc.fiber.c0_res_title": "Flawless Engineering Victory!",
-        "noc.fiber.c0_res_desc": "Traffic wrapped instantaneously through the redundant ring. Customers experienced zero downtime! The field team patched the core line while operations stayed green.",
+        "noc.fiber.c0_res_desc": "In this illustrative scenario, a healthy backup route and sufficient capacity carried the traffic. Service continued over the alternative connection while the crew repaired the primary line.",
         "noc.fiber.c0_chirper": "\"Yo the live match stream didn't stutter even for a millisecond! That's what I call bulletproof telecom infrastructure, huge props @NetworkBoss!\"",
         "noc.fiber.c1_title": "Dispatch Only a COW (Cell-on-Wheels) Mobile Tower Truck",
         "noc.fiber.c1_desc": "Restore mobile data over the air, but leave the severed underground fiber on standby.",
@@ -733,7 +714,7 @@ const translations = {
         
         "char.murat_role": "Competitive Gamer & Power User",
         "char.murat_name": "Murat",
-        "char.murat_quote": "\"I need zero latency and gigabit speeds! If my connection drops mid-match, I'll hold your company accountable!\"",
+        "char.murat_quote": "\"I need low latency and fast internet! If my connection drops mid-match, I'll hold your company accountable!\"",
         "char.murat_bio": "An impatient tech enthusiast demanding low ping. Keep him happy and he'll refer his whole squad; fail him and he'll leave spicy reviews.",
 
         "char.selin_role": "Remote Worker & Designer",
@@ -748,12 +729,8 @@ const translations = {
 
         // Fleet Section
         "fleet.badge": "FLEET & UPGRADES",
-        "fleet.title": "11 Upgradable & Customizable Field Vehicles",
-        "fleet.subtitle": "From basic bicycles to 50-meter cranes and helicopters, upgrade 11 vehicles across 10 levels, boost speed and capacity, and outfit them with custom liveries.",
-        "fleet.tier1": "Region: Garage Roots",
-        "fleet.tier2": "Region: Neighborhood",
-        "fleet.tier3": "Region: District Expansion",
-        "fleet.tier4": "Region: Metropolis",
+        "fleet.title": "11 Different Field Vehicles",
+        "fleet.subtitle": "Choose suitable vehicles from bicycles to cranes and helicopters. Develop mobile base station (COW) capacity along its existing 10-level upgrade path.",
         
         "fleet.bike_name": "Technician Bicycle",
         "fleet.bike_role": "Zero-fuel, swift response for simple neighborhood faults.",
@@ -781,37 +758,18 @@ const translations = {
         // Gallery
         "gallery.badge": "MEDIA SHOWCASE",
         "gallery.title": "In-Game Screenshots & World Maps",
-        "gallery.subtitle": "Early looks at world terrain and infrastructure planning. More screenshots dropping soon!",
+        "gallery.subtitle": "Map images from the world of Network Boss.",
         "gallery.pic1_title": "Metropolitan Coastline Map",
-        "gallery.pic1_sub": "Bird's-eye view of open plains, shoreline, and dense urban districts.",
+        "gallery.pic1_sub": "Promotional map image; not a game-interface screen.",
         "gallery.pic2_title": "Regional District Expansion Map",
-        "gallery.pic2_sub": "Inter-sector fiber backbone routing and high-capacity switching nodes.",
+        "gallery.pic2_sub": "Promotional map image; not a game-interface screen.",
         "gallery.placeholder_title": "NOC Operations & Cable Route Editor",
         "gallery.placeholder_sub": "Reserved for upcoming high-res gameplay captures.",
-
-        // Milestones
-        "milestones.badge": "COMMUNITY REWARDS",
-        "milestones.title": "Pre-Registration Stretch Goals",
-        "milestones.subtitle": "Unlock exclusive in-game rewards delivered to all players on launch day!",
-        "milestones.unlocked": "Unlocked",
-        "milestones.locked": "Locked",
-        "milestone1.goal": "1,000 Signups",
-        "milestone1.title": "Startup Seed Capital",
-        "milestone1.desc": "Extra $1,000 cash and 50 Research Points upon founding.",
-        "milestone2.goal": "5,000 Signups",
-        "milestone2.title": "Retro Garage Signboard",
-        "milestone2.desc": "Gold-embossed garage signboard and exclusive Elif outfit.",
-        "milestone3.goal": "10,000 Signups",
-        "milestone3.title": "Signal Prime Neon Skin",
-        "milestone3.desc": "Cyber-neon special livery for your flagship operation vehicle.",
-        "milestone4.goal": "25,000 Signups",
-        "milestone4.title": "Founder Chief Engineer Title",
-        "milestone4.desc": "500 Bits launch bonus and an exclusive glowing profile badge.",
 
         // Pre-registration Form
         "prereg.badge": "CLAIM YOUR SEAT",
         "prereg.title": "Transmit the First Signal on Launch Day!",
-        "prereg.subtitle": "Leave your email to receive an instant alert when we go live on Google Play, App Store & Steam, and claim all milestone rewards.",
+        "prereg.subtitle": "Leave your email to receive game launch announcements and major development news.",
         "prereg.placeholder_email": "Enter your email (e.g., name@domain.com)",
         "prereg.platform_label": "Your Device:",
         "prereg.platform_android": "Android (Google Play)",
@@ -820,7 +778,9 @@ const translations = {
         "prereg.btn_submit": "Pre-Register Now",
         "prereg.privacy_note": "🔒 We respect your privacy. No spam, only essential game launch announcements.",
         "prereg.success_msg": "🎉 Success! Pre-registration confirmed. Welcome aboard, Chief Engineer!",
-        "prereg.error_msg": "⚠️ Something went wrong. Please enter a valid email address.",
+        "prereg.error_msg": "⚠️ The submission result could not be verified. Your email was preserved; contact contact@networkbossgame.com before submitting again.",
+        "prereg.unconfirmed_msg": "Your request was sent, but the server acknowledgement cannot be read. This is not a confirmed registration; contact contact@networkbossgame.com before submitting again.",
+        "prereg.invalid_msg": "Please enter a valid email address.",
 
         // Footer
         "footer.tagline": "The ultimate telecom network simulation and tycoon experience.",

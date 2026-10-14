@@ -36,6 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        document.querySelectorAll('[data-full-tr][data-full-en]').forEach(item => {
+            const source = item.getAttribute(`data-full-${lang}`);
+            item.setAttribute('data-full', source);
+            const preview = item.querySelector('img');
+            if (preview) {
+                preview.src = source;
+                const altKey = preview.getAttribute('data-i18n-alt');
+                if (dict[altKey]) preview.alt = dict[altKey];
+            }
+        });
+
         // Update active character & simulator
         updateActiveCharacter();
         updateSimulator();
@@ -144,16 +155,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Dialogue reaction & avatar emotion (Using transparent cutout portraits)
         if (price >= 85 && (speed < 120 || scoreRatio < 0.65)) {
             elifSpeech.textContent = dict['sim.elif_dialogue_expensive'];
-            if (elifAvatar) elifAvatar.src = 'assets/img/characters/ElifTutorialConcerned.png';
+            if (elifAvatar) elifAvatar.src = 'assets/img/characters/ElifTutorialConcerned.webp';
         } else if (price <= 20 && (speed >= 300 || quota >= 500)) {
             elifSpeech.textContent = dict['sim.elif_dialogue_cheap'];
-            if (elifAvatar) elifAvatar.src = 'assets/img/characters/ElifTutorialConcerned.png';
+            if (elifAvatar) elifAvatar.src = 'assets/img/characters/ElifTutorialConcerned.webp';
         } else if (marketAttractiveness >= 72) {
             elifSpeech.textContent = dict['sim.elif_dialogue_great'];
-            if (elifAvatar) elifAvatar.src = 'assets/img/characters/ElifTutorialHappy.png';
+            if (elifAvatar) elifAvatar.src = 'assets/img/characters/ElifTutorialHappy.webp';
         } else {
             elifSpeech.textContent = dict['sim.elif_dialogue_balanced'];
-            if (elifAvatar) elifAvatar.src = 'assets/img/characters/elif_main.png';
+            if (elifAvatar) elifAvatar.src = 'assets/img/characters/elif_main.webp';
         }
     }
 
@@ -181,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slaTrendHtml: '<i class="fas fa-arrow-down"></i> -%0.4',
                 slaTrendClass: 'trend-down',
                 slaFill: '92%',
-                stock: '₺42.50',
+                stock: '$42.50',
                 stockTrendHtml: '<i class="fas fa-arrow-trend-down"></i> Düşüş Riski',
                 stockTrendClass: 'trend-down',
                 stockFill: '78%',
@@ -212,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.fiber.c0_res_title',
                     resDescKey: 'noc.fiber.c0_res_desc',
                     deltaSla: '+0.1% (%99.9)',
-                    deltaStock: '+₺2.72 (+6.4%)',
+                    deltaStock: '+$2.72 (+6.4%)',
                     deltaSent: '+8% (%94)',
                     chirperUser: '@Eren_Gamer',
                     chirperKey: 'noc.fiber.c0_chirper',
@@ -231,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.fiber.c1_res_title',
                     resDescKey: 'noc.fiber.c1_res_desc',
                     deltaSla: '-1.2% (%98.6)',
-                    deltaStock: '-₺0.80 (-1.9%)',
+                    deltaStock: '-$0.80 (-1.9%)',
                     deltaSent: '-15% (%71)',
                     chirperUser: '@KobiPatronu',
                     chirperKey: 'noc.fiber.c1_chirper',
@@ -250,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.fiber.c2_res_title',
                     resDescKey: 'noc.fiber.c2_res_desc',
                     deltaSla: '-15.4% (%84.4)',
-                    deltaStock: '-₺5.95 (-14.0%)',
+                    deltaStock: '-$5.95 (-14.0%)',
                     deltaSent: '-42% (%44)',
                     chirperUser: '@SinirliAbone',
                     chirperKey: 'noc.fiber.c2_chirper',
@@ -271,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slaTrendHtml: '<i class="fas fa-arrow-down"></i> -%0.5',
                 slaTrendClass: 'trend-down',
                 slaFill: '88%',
-                stock: '₺42.50',
+                stock: '$42.50',
                 stockTrendHtml: '<i class="fas fa-arrow-right"></i> Sabit',
                 stockTrendClass: 'trend-warn',
                 stockFill: '78%',
@@ -302,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.crowd.c0_res_title',
                     resDescKey: 'noc.crowd.c0_res_desc',
                     deltaSla: '+0.1% (%99.9)',
-                    deltaStock: '+₺3.80 (+8.9%)',
+                    deltaStock: '+$3.80 (+8.9%)',
                     deltaSent: '+11% (%97)',
                     chirperUser: '@FanatikAmigo',
                     chirperKey: 'noc.crowd.c0_chirper',
@@ -321,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.crowd.c1_res_title',
                     resDescKey: 'noc.crowd.c1_res_desc',
                     deltaSla: '-0.8% (%99.0)',
-                    deltaStock: '₺42.50 (Sabit)',
+                    deltaStock: '$42.50 (Sabit)',
                     deltaSent: '-8% (%78)',
                     chirperUser: '@MahalleSakin',
                     chirperKey: 'noc.crowd.c1_chirper',
@@ -340,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.crowd.c2_res_title',
                     resDescKey: 'noc.crowd.c2_res_desc',
                     deltaSla: '-9.5% (%90.3)',
-                    deltaStock: '-₺4.50 (-10.6%)',
+                    deltaStock: '-$4.50 (-10.6%)',
                     deltaSent: '-35% (%51)',
                     chirperUser: '@SporMuhabiri',
                     chirperKey: 'noc.crowd.c2_chirper',
@@ -361,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slaTrendHtml: '<i class="fas fa-arrow-down"></i> -%0.8',
                 slaTrendClass: 'trend-danger',
                 slaFill: '82%',
-                stock: '₺42.50',
+                stock: '$42.50',
                 stockTrendHtml: '<i class="fas fa-arrow-down"></i> Risk',
                 stockTrendClass: 'trend-down',
                 stockFill: '78%',
@@ -392,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.blackout.c0_res_title',
                     resDescKey: 'noc.blackout.c0_res_desc',
                     deltaSla: '+0.1% (%99.9)',
-                    deltaStock: '+₺4.20 (+9.8%)',
+                    deltaStock: '+$4.20 (+9.8%)',
                     deltaSent: '+13% (%99)',
                     chirperUser: '@BelediyeBaskani',
                     chirperKey: 'noc.blackout.c0_chirper',
@@ -411,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.blackout.c1_res_title',
                     resDescKey: 'noc.blackout.c1_res_desc',
                     deltaSla: '-2.4% (%97.4)',
-                    deltaStock: '+₺0.50 (+1.2%)',
+                    deltaStock: '+$0.50 (+1.2%)',
                     deltaSent: '-10% (%76)',
                     chirperUser: '@HemsireAyse',
                     chirperKey: 'noc.blackout.c1_chirper',
@@ -430,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.blackout.c2_res_title',
                     resDescKey: 'noc.blackout.c2_res_desc',
                     deltaSla: '-22.0% (%77.8)',
-                    deltaStock: '-₺7.50 (-17.6%)',
+                    deltaStock: '-$7.50 (-17.6%)',
                     deltaSent: '-48% (%38)',
                     chirperUser: '@HaberTurk',
                     chirperKey: 'noc.blackout.c2_chirper',
@@ -451,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slaTrendHtml: '<i class="fas fa-arrow-down"></i> -%1.4',
                 slaTrendClass: 'trend-danger',
                 slaFill: '76%',
-                stock: '₺42.50',
+                stock: '$42.50',
                 stockTrendHtml: '<i class="fas fa-arrow-down"></i> Soygun Riski',
                 stockTrendClass: 'trend-danger',
                 stockFill: '75%',
@@ -482,7 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.cyber.c0_res_title',
                     resDescKey: 'noc.cyber.c0_res_desc',
                     deltaSla: '+0.1% (%99.9)',
-                    deltaStock: '+₺3.10 (+7.3%)',
+                    deltaStock: '+$3.10 (+7.3%)',
                     deltaSent: '+9% (%95)',
                     chirperUser: '@CyberSecAnalyst',
                     chirperKey: 'noc.cyber.c0_chirper',
@@ -501,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.cyber.c1_res_title',
                     resDescKey: 'noc.cyber.c1_res_desc',
                     deltaSla: '-3.5% (%96.3)',
-                    deltaStock: '-₺1.20 (-2.8%)',
+                    deltaStock: '-$1.20 (-2.8%)',
                     deltaSent: '-18% (%68)',
                     chirperUser: '@OyuncuMehmet',
                     chirperKey: 'noc.cyber.c1_chirper',
@@ -520,7 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resTitleKey: 'noc.cyber.c2_res_title',
                     resDescKey: 'noc.cyber.c2_res_desc',
                     deltaSla: '-18.0% (%81.8)',
-                    deltaStock: '-₺6.80 (-16.0%)',
+                    deltaStock: '-$6.80 (-16.0%)',
                     deltaSent: '-45% (%41)',
                     chirperUser: '@TechGundem',
                     chirperKey: 'noc.cyber.c2_chirper',
@@ -739,35 +750,35 @@ document.addEventListener('DOMContentLoaded', () => {
             nameKey: 'char.elif_name',
             quoteKey: 'char.elif_quote',
             bioKey: 'char.elif_bio',
-            img: 'assets/img/characters/elif_main.png' // Transparent cutout matching other characters
+            img: 'assets/img/characters/elif_main.webp' // Transparent cutout matching other characters
         },
         fatma: {
             roleKey: 'char.fatma_role',
             nameKey: 'char.fatma_name',
             quoteKey: 'char.fatma_quote',
             bioKey: 'char.fatma_bio',
-            img: 'assets/img/characters/fatma_normal.png'
+            img: 'assets/img/characters/fatma_normal.webp'
         },
         murat: {
             roleKey: 'char.murat_role',
             nameKey: 'char.murat_name',
             quoteKey: 'char.murat_quote',
             bioKey: 'char.murat_bio',
-            img: 'assets/img/characters/murat_normal.png'
+            img: 'assets/img/characters/murat_normal.webp'
         },
         selin: {
             roleKey: 'char.selin_role',
             nameKey: 'char.selin_name',
             quoteKey: 'char.selin_quote',
             bioKey: 'char.selin_bio',
-            img: 'assets/img/characters/selin_normal.png'
+            img: 'assets/img/characters/selin_normal.webp'
         },
         deniz: {
             roleKey: 'char.deniz_role',
             nameKey: 'char.deniz_name',
             quoteKey: 'char.deniz_quote',
             bioKey: 'char.deniz_bio',
-            img: 'assets/img/characters/deniz_normal.png'
+            img: 'assets/img/characters/deniz_normal.webp'
         }
     };
 
@@ -850,9 +861,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const platformInput = document.getElementById('userPlatform');
             const dict = translations[currentLang] || translations.tr;
 
-            if (!emailInput || !emailInput.value.trim()) return;
+            if (!emailInput || !preregForm.checkValidity()) {
+                preregForm.reportValidity();
+                return;
+            }
 
             const submitBtn = preregForm.querySelector('button[type="submit"]');
+            if (submitBtn.disabled) return;
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + (currentLang === 'tr' ? 'Kaydediliyor...' : 'Saving...');
@@ -866,7 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Post directly to Google Sheets Web App
-                await fetch(GOOGLE_SHEETS_API_URL, {
+                const response = await fetch(GOOGLE_SHEETS_API_URL, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: {
@@ -875,22 +890,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: payload
                 });
 
-                formResponse.className = 'form-response-msg success';
-                formResponse.textContent = dict['prereg.success_msg'];
+                // An opaque response confirms neither delivery nor a saved Sheet row.
+                // Preserve the existing submission service without manufacturing success.
+                if (response.type === 'opaque') {
+                    formResponse.className = 'form-response-msg pending';
+                    formResponse.setAttribute('data-i18n', 'prereg.unconfirmed_msg');
+                    formResponse.textContent = (translations[currentLang] || translations.tr)['prereg.unconfirmed_msg'];
+                } else {
+                    if (!response.ok) throw new Error('Registration service rejected the request');
+                    const acknowledgement = await response.json();
+                    if (acknowledgement.success !== true) throw new Error('Registration was not acknowledged');
+                    formResponse.className = 'form-response-msg success';
+                    formResponse.setAttribute('data-i18n', 'prereg.success_msg');
+                    formResponse.textContent = (translations[currentLang] || translations.tr)['prereg.success_msg'];
+                    emailInput.value = '';
+                }
                 formResponse.style.display = 'block';
-                emailInput.value = '';
             } catch (err) {
-                try {
-                    await fetch(GOOGLE_SHEETS_API_URL, {
-                        method: 'POST',
-                        body: payload
-                    });
-                } catch(e) {}
-
-                formResponse.className = 'form-response-msg success';
-                formResponse.textContent = dict['prereg.success_msg'];
+                // Retrying automatically may create duplicate registrations.
+                formResponse.className = 'form-response-msg error';
+                formResponse.setAttribute('data-i18n', 'prereg.error_msg');
+                formResponse.textContent = (translations[currentLang] || translations.tr)['prereg.error_msg'];
                 formResponse.style.display = 'block';
-                emailInput.value = '';
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
